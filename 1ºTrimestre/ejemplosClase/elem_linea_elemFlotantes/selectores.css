@@ -1,0 +1,55 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+   /* background-color: beige;*/
+}
+
+#cabecera {
+    color: beige;
+    height: 100px;
+    text-align: center;
+    background-color: darkblue !important;
+    margin: 5%;
+}
+
+.enlaces {
+    color: white;
+    font-weight: bold;
+    border: solid 1px red;
+    padding: 5px, 15px, 25px, 50px;
+}
+
+main{
+    color: darkblue;
+    background-color: beige;
+}
+
+h2, h3{
+    color: darkmagenta;
+}
+
+main p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+main>ul{
+    font-size: 25px;
+}
+div>p{
+    color: purple;
+}
+
+/*Cambia justo lo que hay despues de h1*/
+h1+p{
+    text-align: center;
+}
+
+h2~p{
+    text-align: right;
+}
+img[width="78%"]{
+    border: 5px solid red;
+}
+
+/* a[src$=".png"]{
+
+
+} */

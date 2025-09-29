@@ -1,0 +1,102 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>FORMULARIO</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <fieldset>
+            <legend>Datos Básicos</legend>
+                <label>Nombre: <input type="text" name="nombre" placeholder="Escribe tu nombre aquí"></label>
+                <label>Email: <input type="email" name="email" placeholder="ej: yo@tusitio.es"></label>
+                <label>Contraseña: <input type="password" name="pass"></label>
+                <label>Teléfono: <input type="tel" name="telefono" placeholder="+99 111 222 333"></label>
+                <label>Sitio Web: <input type="url" name="web"></label>
+                <label>Campo de solo lectura: <input type="text" value="Este valor no se puede cambiar" readonly></label>
+                <label>Campo deshabilitado: <input type="text" value="Este campo no se envía" disabled></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Opciones y Selecciones</legend>
+                <p>Género:</p>
+                    <label><input type="radio" name="genero" value="hombre"> Hombre</label>
+                    <label><input type="radio" name="genero" value="mujer"> Mujer</label>
+
+                <p>Dispositivos:</p>
+                    <label><input type="checkbox" name="dispositivo" value="pc"> PC</label>
+                    <label><input type="checkbox" name="dispositivo" value="tablet"> Tableta</label>
+                    <label><input type="checkbox" name="dispositivo" value="movil"> Móvil</label>
+
+                <label>Provincia:
+                    <select name="provincia">
+                        <option>Teruel</option>
+                        <option>Madrid</option>
+                        <option>Valencia</option>
+                    </select>
+                </label>
+
+                <label>Editor de código favorito:
+                    <input type="text" name="editor">
+                </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Fechas, Números y Rangos</legend>
+                <label>Fecha de nacimiento: <input type="date" name="nacimiento"></label>
+                <label>Hora de la cita: <input type="time" name="hora"></label>
+                <label>Semana del año: <input type="week" name="semana"></label>
+                <label>Mes de facturación: <input type="month" name="mes"></label>
+                <label>Fecha y hora exactas: <input type="datetime-local" name="fecha_hora"></label>
+
+            <label>Cantidad (10 a 50, pasos de 5): 
+                <input type="number" name="cantidad" min="10" max="50" step="5" value="25">
+            </label>
+
+            <label>Nivel de satisfacción:
+                <input type="range" name="satisfaccion" min="0" max="100" value="50">
+            </label>
+
+            <label>Color favorito:
+                <input type="color" name="color">
+            </label>
+
+            <label>Buscar en el sitio:
+                <input type="search" name="buscar">
+            </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Archivos, Texto y Progreso</legend>
+            <label>Subir archivo:
+                <input type="file" name="archivo" multiple>
+            </label>
+
+        <label>Comentarios:</label>
+        <textarea name="comentarios" rows="4"></textarea>
+
+        <label>Progreso de la tarea (Determinado):</label>
+        <progress value="70" max="100"></progress>
+
+        <label>Conectando... (Indeterminado):</label>
+        <progress></progress> 
+    </fieldset>
+
+    <fieldset>
+      <legend>Acciones</legend>
+      <button type="submit">Enviar Formulario</button>
+      <button type="reset">Limpiar Campos</button>
+      <button type="button">Botón Genérico</button>
+    </fieldset>
+
+    <div class="imagen">
+      <p>O envía con esta imagen:</p>
+      <img src="imagen.png" alt="icono correo código">
+    </div>
+
+
+    </body>
+</html>

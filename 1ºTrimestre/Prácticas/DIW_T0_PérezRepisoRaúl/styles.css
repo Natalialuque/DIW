@@ -1,0 +1,32 @@
+body{
+    background-color: bisque;
+}
+h1 {
+    text-align: center;
+    margin-top: 30;
+}
+.lista {
+    list-style-type: none; 
+    margin: 0;           
+    padding: 0;  
+}
+table {
+    margin: 0 auto;
+}
+label {
+    font-family: 'Courier New', Courier, monospace;
+    font-style: oblique;
+}
+.button {
+    text-align: center;
+}
+td{
+    padding: 25;
+}
+.MarcoInferior{
+  margin: 0 auto;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+
+}

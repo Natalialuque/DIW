@@ -1,0 +1,15 @@
+table, td, tr {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: rgb(255, 47, 47);
+}
+
+table {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.prim {
+    background-color: yellow;
+}
