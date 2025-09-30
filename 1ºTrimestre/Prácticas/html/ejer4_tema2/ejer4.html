@@ -6,24 +6,49 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>REPRODUCCION DE VIDEO 1</h1>
+    <h1>REPRODUCCION DE VIDEO 1 mp4</h1>
     <video
     controls
     autoplay
     width="500"
     height="400"
-    poster="src/londres.png">
-            <source src="src/videoplayback1.mp4" type="video/mp4"> 
+    poster="src/cocacola.png">
+            <source src="src/Tan familiar como Coca-Cola - Coca-Cola (144p, h264).mp4" type="video/mp4"> 
     </video>
 
-    <h1>REPRODUCCION DE VIDEO 2</h1>
+
+
+    <h1>REPRODUCCION DE VIDEO 2 webm</h1>
     <video
     controls
     autoplay
     width="500"
     height="400"
-    poster="src/houseTour.png">
-            <source src="src/videoplayback2.mp4" type="video/mp4"> 
+    poster="src/oso.png">
+            <source src="src/videoplayback.webm" type="video/webm"> 
     </video>
+
+
+    <h1>REPRODUCCION AUDIO MP3</h1>
+    <audio controls>
+        
+        <source src="src/morat.mp3" type="audio/mp3" />
+
+       <track src="src/subtitulos.vtt" kind="subtitles" srclang="es" 
+            label="Español" type="text/vtt"  default/>
+
+
+    </audio>
+    
+    <h1>REPRODUCCION AUDIO ogg</h1>
+    <audio controls>
+        
+        <source src="src/James Arthur .ogg" type="audio/ogg" />
+
+        <track src="src/subtitulos2.vtt" kind="subtitles" srclang="en" 
+            label="English" type="text/vtt"  default/> 
+
+    </audio>
+
 </body>
 </html>
