@@ -1,0 +1,96 @@
+#cabecera{
+    background-color: rgb(67, 123, 226);
+    font-style: arial;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+}
+
+nav{
+    background-color: rgb(150, 170, 255);
+    text-align: center;
+    padding: 15px;
+   
+}
+
+a[href = "#ultima-hora"]{
+    color: rgb(140, 0, 255);
+    border: solid 2px rgb(29, 70, 182);
+    margin-right: 30px;
+    border-radius: 5px;
+    padding: 8px;
+
+}
+
+a[href = "#tecnologia"]{
+    color: rgb(252, 239, 57);
+    border: solid 2px rgb(29, 70, 182);
+    border-radius: 5px;
+     padding: 8px;
+}
+
+a[href = "#esports"]{
+    color: rgb(38, 14, 252);
+    border: solid 2px rgb(29, 70, 182);
+    margin-left: 30px;
+    border-radius: 5px;
+     padding: 8px;
+
+}
+
+
+h2,h3,h4,h5{
+     font-weight: bold;
+}
+
+body{
+    background-color: beige;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#noticia-principal{
+    background-color: white;
+    border: solid 2px rgb(29, 70, 182);
+    margin: 10px;
+    padding: 10px;
+}
+
+.noticia-div{
+    border: solid 2px rgb(29, 70, 182);
+    margin-top:  10px;
+    padding: 10px;
+    background-color: yellow;
+}
+
+.noticia-div:first-of-type{
+    background-color: white;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    background-color: rgb(67, 123, 226);
+    padding: 5px;
+}
+
+strong{
+    text-decoration: underline dotted rgb(85, 185, 231);
+}
+
+a[href^="/informe-completo"]{
+   background-color: lightblue;
+}
+
+span{
+    text-decoration: underline black;
+}
+
+h5{
+    text-transform: uppercase;
+}
+
+a[href^="https://twitter.com"]{
+    border-bottom: solid blue 1px;
+     text-decoration: underline dotted rgb(238, 28, 28);
+ 
+}
