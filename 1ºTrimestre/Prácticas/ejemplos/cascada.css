@@ -1,0 +1,40 @@
+/* div{
+    border-bottom: 1px dotted red;
+    border: 2px solid black;    
+}
+
+p{
+    border: inherit;
+}
+
+.initial{
+    border: initial;
+}
+
+.unset{
+    border-bottom: unset;
+} */
+
+/*PESEUDO*/
+/* div p:last-child{
+    border-bottom: 1px dotted red;
+    border: 2px solid black;    
+} */
+
+/* div *:not(p){
+   color: rgb(143, 72, 72);
+}
+
+div:has(p){
+    font-size: 1.2em;
+} */
+
+/* div:has(P):not(:has(span)){
+    color: red;
+} 
+*/
+/*empenzando por el primero cada3*/
+
+ol li:nth-child(3){
+    border : 1px solid black;
+}

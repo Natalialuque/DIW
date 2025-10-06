@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Columnas</title>
+
+    <style>
+        body{
+            text-align: justify;
+        }
+
+        article{
+            columns: 200px;
+            column-gap: 40px;
+            column-rule: 1px solid gray;
+        }
+        h1{
+           column-span: all;
+           text-align: center;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            break-inside: avoid;
+        }
+
+    </style>
+</head>
+<body>
+    <article>
+    <h1>TITULO NOTICIAS</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In tempore dolorem quod aliquid ipsa facilis eius possimus adipisci modi cumque eveniet nisi iste alias obcaecati, officia eum iusto quo consectetur?</p>
+    <figure>
+        <img src="/Prácticas/html/ejer3_tema2/imagen.png" alt="imagen de prueba">
+    </figure>
+    <h3>subtitulo 2</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur fugiat eveniet, dicta rem obcaecati repellendus iste eum cum modi quidem incidunt repudiandae alias laboriosam ut hic quos quod! Itaque, omnis!
+    </p>
+    <h3>Subitutlo 3</h3>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ipsam similique, tempora repellat quasi vel aliquam cumque ipsa sunt quia iusto repudiandae explicabo voluptatibus eveniet totam dolor blanditiis tenetur fuga.
+    </p>
+    </article>
+</body>
+</html>
