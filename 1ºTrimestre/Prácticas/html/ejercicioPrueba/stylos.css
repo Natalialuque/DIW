@@ -1,121 +1,68 @@
-
 :root{
-    --color-Primario: #005c9c;
-    --color-Secundario: #d9534f;
+    --color-primario : #0a4a7a;
+    --color-secundario: #008cba;
+    --color-fondo : #f4f4f4;
+    --color-texto: #333;
+    --color-blanco: #fff;
 }
 
-header{
-    background-color: #0A4A7A;
-    color: white;
-}
 *{
     margin: 0;
     padding: 0;
+    border: 0;
 }
 
-header > li{
-    position: relative;
-    top: 1.5em;
-}
+/**CABECERA*/
 
-#tituloPrincipal{
-    text-align: left;
-    color: white;
-    padding-top: 5px ;
-}
-
-main {
+.cabecera{
+    background-color: var(--color-primario);
+    /*Para que detecte las cajas y se centre*/
     overflow: auto;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    background: var(--texto-Oscuro);
-    text-align: right;
-    border-radius: 8px;
-}
-nav li {
-    display: inline-block;
-}
-nav a {
-    display: block;
-    padding: 15px;
-    color: var(--blanco);
-    float: right;
-}
-nav a:hover{
-    background-color: white;
-}
-
-h2,h3,h4{
-    color: #0A4A7A;
-}
-
-
-input[type='email']:invalid, input[type='text']:invalid{
-    border: 3px solid var(--color-Secundario);
-}
-
-
-footer{
-    position: relative;
-    text-align: center;
-    background-color: #333;
-    color:white ;
-    padding: 10px;
-}
-
-/* main{
+.cabecera h1{
     float: left;
 }
-aside{
+
+.cabecera nav{
     float: right;
-} */
-
-.niño{
-    border-radius: 100px;
 }
 
-img{
-    width: 200px;
-    height: 200px;
-}
-button { 
-    padding: 10px 15px; 
-    border: none; 
-    background-color: var(--color-Primario);
-    color: var(--blanco);  
-    cursor: pointer; 
-    border-radius: 5px;
+
+
+/**CUERPO*/
+
+body{
+    background-color: var(--color-fondo);
+    overflow: auto;
+
 }
 
-main,section{
-    background-color: white;
+.principal{
+    float: left;
+    width: 65%;
+}
+ .kioto{
+    width: 400px;;
 }
 
-section{
-    borde
+.flota-der{
+    float: right;
+}
+.flotaizr{
+    float:  left;
 }
 
-div{
-    background-color: #e4b9b9;
-}
-article,aside{
-    background: white;
-    border-radius: 8px;
-    margin-bottom: 20px;
+.mimgMia{
+    width: 100px;
 }
 
-main { 
-    width: 65%; 
-    float: left; 
-    box-sizing: border-box; 
-    padding-right: 20px;
-}
 
-aside { 
-    width: 35%; 
-    float: right; 
-    box-sizing: border-box; 
+
+
+
+/*PIE DE PAGINA*/
+footer{
+    background-color: var(--color-texto);
+    clear: both;
 }
