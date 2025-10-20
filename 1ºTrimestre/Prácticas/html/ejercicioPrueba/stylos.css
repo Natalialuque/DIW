@@ -1,9 +1,11 @@
-:root{
+:root{ /*VARIABLES*/
     --color-primario : #0a4a7a;
     --color-secundario: #008cba;
-    --color-fondo : #f4f4f4;
+    --color-fondo : #dad9d9;
     --color-texto: #333;
     --color-blanco: #fff;
+    --fuente-titulo :"Georgia,serif";
+    --fuente-cuerpo:"Arial,sans-serif";
 }
 
 *{
@@ -12,30 +14,108 @@
     border: 0;
 }
 
+/**CONTENEDOR*/
+.contenedor{
+    width: 75%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body{
+    font-family: var(--fuente-cuerpo);
+    text-align: justify;
+    background-color: var(--color-fondo);
+    font-family: var(--fuente-cuerpo);
+}
+
 /**CABECERA*/
 
 .cabecera{
     background-color: var(--color-primario);
     /*Para que detecte las cajas y se centre*/
-    overflow: auto;
+    overflow-y: auto;
 }
 
 .cabecera h1{
     float: left;
+    color: var(--color-blanco);
+    font-family: var(--fuente-titulo);
+    margin-bottom: 25px;
 }
 
-.cabecera nav{
+.cabecera div{
+    margin: 25px;
+    margin-top: 5px;
+
+}
+.cabecera .navegacion ul{
+    margin-top: 10px;
+
+}
+.cabecera .navegacion{
     float: right;
 }
 
+.cabecera .navegacion li{
+    display: inline;
+}
 
+.cabecera .navegacion a{
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-family: bold;
+    padding:10px;
+    margin: 0 5px;
+}
+.cabecera .navegacion a:hover{
+    color: var(--color-primario);
+    background-color: var(--color-blanco);
+    border-radius: 5px;
+}
 
-/**CUERPO*/
+.cabecera .navegacion a::before{
+    content: ". "; /*siempre debe de acompañar a las pseudoclases before, after*/
+}
 
-body{
-    background-color: var(--color-fondo);
-    overflow: auto;
+/**MAIN*/
+.articulo{
+    margin: 20px;
+    background-color: var(--color-blanco);
+    border-radius: 5px;
+    padding-bottom: 25px;
+}
 
+.articulo p{
+    margin: 0 20px;
+}
+
+.articulo figure + p::first-letter{
+    font-size: 3em;
+    color: var(--color-primario);
+    font-family: var(--fuente-titulo);
+    font-weight: bold;
+    float: left;
+
+}
+.principal .articulo .imagen-articulo{
+    width: 400px;
+}
+
+.principal .articulo .flota-der{
+    float: right;
+    margin-right: 25px;
+    margin-left: 10px;
+}
+
+.principal .articulo .flota-izr{
+    float: left;
+    margin: 5px 10px 0px 10px;
+}
+
+.articulo h2{
+    font-family: var(--fuente-titulo);
+    color: var(--color-primario);
+    margin: 20px;
 }
 
 .principal{
@@ -57,12 +137,113 @@ body{
     width: 100px;
 }
 
+figcaption {
+    text-align: right;
+    font-size: 0.8em;
+    color: var(--color-texto);
+}
+
+/**ASIDEE*/
+.lateral{
+    float: right;
+    width: 30%;
+    overflow: auto;
+}
+
+.lateral section{
+    margin: 0 15px 15px;
+    background-color: var(--color-blanco);
+    border-radius: 5px;
+    padding-bottom: 15px;
+}
+
+.lateral section h3{
+    font-family: var(--color-blanco);
+    color: var(--color-secundario);
+    padding: 20px;
+    border-bottom: 2px solid gray;
+}
+
+.lateral .mimgMia{
+    width: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.lateral .mimgMia:hover{
+    box-shadow: 0 0 15px var(--color-secundario);
+}
+
+.lateral form label{
+    margin-left: 20px;
+}
+
+.lateral form input[type="email"]{
+    width: 100%;
+    display: block;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid var(--color-secundario);
+    border-radius: 4px;
+}
+
+.lateral p{
+        margin: 0 20px;
+}
+
+.lateral form button{
+    width: 100%;
+    display: block;
+    margin: 20px;
+    padding: 10px;
+    background-color: var(--color-secundario);
+    border-radius: 4px;
+    color: white ;
+    font-weight: bold;
+}
+
+.lateral form button:hover{
+    box-shadow: 0 0 5px var(--color-secundario);
+}
 
 
+/**TABLA*/
+table{
+    margin: 20px;
+    width: 100%;
+}
+
+table th, table td{
+    padding: 10px;
+    text-align: left;
+}
+
+table thead th{
+    background-color: var(--color-fondo);
+    border-bottom: 2px dotted black;
+}
+
+table tbody tr:nth-child(even){
+    background-color: rgb(233,233,233);
+    border-bottom: 2px dotted black;
+}
 
 
 /*PIE DE PAGINA*/
 footer{
     background-color: var(--color-texto);
     clear: both;
+    padding: 20px;
+
 }
+footer p{
+    text-align: center;
+    color: white;
+}
+
+footer p a{
+    color: var(--color-blanco);
+}
+
+
