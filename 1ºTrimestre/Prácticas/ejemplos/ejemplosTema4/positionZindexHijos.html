@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <style>
+    
+    .caja-padre{
+        border: 2px solid black;
+        background-color: blue;
+        border-radius: 5px;
+        width: 150px;
+        position: relative;
+        margin: 250px;
+    }
+
+    p1{
+        z-index: 300;
+    }
+    
+    p2{
+        z-index: 200;
+    }
+
+    .p1h1{
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        background-color: darkcyan;
+    }
+
+     .p1h2{
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        background-color: rgb(62, 71, 71);
+    }
+
+    .p2h2{
+        background-color: rgb(62, rgb(141, 172, 172));
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    }
+
+     .p2h3{
+        background-color: rgb(62, rgb(141, 172, 172));
+        position: absolute;
+        top: 50px;
+        left: 50px;
+
+    }
+
+    .caja{
+        width: 150px;
+        height: 150px;
+        border-radius: 5px;
+        border: 2px solid black;
+        background-color: blueviolet;
+    }
+
+       
+    </style>
+</head>
+<body>
+    <div class="caja-padre p1">div 1
+        <div class="caja p1h1">divmini 1.2</div>
+        <div class="caja p1h2">divmini 1.3</div>
+    </div>
+
+    <div class="caja-padre p2">div 2
+        <div class="caja p2h2">divmini 2.2</div>
+        <div class="caja p2h3">div 2.3</div>
+    </div>
+</body>
+</html>
