@@ -1,0 +1,146 @@
+/* Cabecera general */
+.cabecera {
+  background-color: #fff;
+  padding: 10px 40px;
+  overflow: hidden; /* para contener los floats */
+  border-bottom: 1px solid #ccc;
+}
+
+/* Contenedor principal */
+.contenedor {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Logo alineado a la izquierda */
+.imagenLogo {
+  float: left;
+  width: 120px;
+  height: auto;
+  margin-right: 30px;
+}
+
+/* Barra de navegación general */
+.barra1 {
+  float: left;
+  width: calc(100% - 150px); /* ajusta según el tamaño del logo */
+  overflow: hidden;
+}
+
+/* Menú izquierdo */
+.menu1 {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu1 li {
+  float: left;
+  margin-right: 25px;
+}
+
+.menu1 a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.barra1 a::after {
+  content: " ▼";
+  font-size: 0.8em;
+}
+
+/* Menú derecho */
+.menu2 {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu2 li {
+  float: left;
+  margin-left: 20px;
+}
+
+.menu2 a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+
+/* Botón destacado */
+#LoginBoton {
+  background-color: #4127d4;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Contenedor principal */
+.bloque1 {
+  width: 100%;
+  overflow: hidden; /* para contener los floats */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/**Foto a la izquierda*/
+.fondo{
+    float: left;
+    width: 30%; /* ajusta según tu diseño */
+}
+
+/* .dibujitoIzquierda{
+    width: 100px;
+}
+
+.menuDerecha{
+    width: 100px;
+}
+
+.camiseta_1{
+    width: 40px;
+}
+.camiseta_2{
+    width: 40px;
+}
+.camiseta_3{
+    width: 40px;
+} */
+
+/**Texto derecha*/
+.section-derecha{
+    float: right;
+    width: 40%; /* ajusta según tu diseño */
+}
+#inicial{
+    color: #4127d4;
+}
+.section-derecha h1 {
+    font-weight: bold;
+}
+
+
+/* Contenedor principal */
+.bloque2 {
+  width: 100%;
+  overflow: hidden; /* para contener los floats */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/**izquierda*/
+.movil{
+     float: left;
+    width: 30%; /* ajusta según tu diseño */
+
+}
+
+/**derecha*/
