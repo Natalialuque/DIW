@@ -83,43 +83,136 @@
   transition: background-color 0.3s ease;
 }
 
+
+
+
+
 /* Contenedor principal */
 .bloque1 {
   width: 100%;
   overflow: hidden; /* para contener los floats */
   padding: 20px;
   box-sizing: border-box;
+  margin-bottom: 10px; /* espacio entre bloque1 y bloque2 */
+}
+
+.todo-izquierda1 {
+  float: left;
+  width: fit-content;
+  position: relative;
+  overflow: visible;
+  width: 520px; /* o el ancho del fondo + margen */
+  min-height: 600px; 
 }
 
 /**Foto a la izquierda*/
 .fondo{
+    display: block;
     float: left;
-    width: 30%; /* ajusta según tu diseño */
+    width: 500px; /* ajusta según tu diseño */
 }
 
-/* .dibujitoIzquierda{
-    width: 100px;
+.olasnegras {
+  position: absolute;
+  top: -15px;
+  text-align: center;
+  left: 235px;
+  width: 40px;
 }
 
-.menuDerecha{
-    width: 100px;
+.bolsanaranja {
+  position: absolute;
+  top: 4px;
+  right: 28px;
+  width: 20px;
 }
 
-.camiseta_1{
-    width: 40px;
+.menunaranja {
+  position: absolute;
+  bottom: 570px;
+  left: 15px;
+  width: 20px;
 }
-.camiseta_2{
-    width: 40px;
-}
-.camiseta_3{
-    width: 40px;
-} */
 
-/**Texto derecha*/
-.section-derecha{
+.olasBlancas{
+  width: 100px;
+  position: absolute;
+  bottom: 450px;
+  left: -45px;
+}
+
+.menuNaranja{
+  position: absolute;
+  width: 200px;
+  bottom: 400px;
+  left: 400px;
+}
+
+.Caja-debajo-Naranja{
+ position: absolute;
+  top: 253px;
+  left: -5px;
+  width: 507px;
+  height: 280px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  z-index: 5;
+}
+
+.alineaC {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;     /* alinea verticalmente si hay diferencia de altura */
+  gap: 20px;               /* espacio entre las imágenes */
+  margin-top: 20px;        /* opcional, para separar del contenido superior */
+}
+
+.cuadrado{
+  width: 150px;
+}
+.camiseta1{
+  width: 150px;
+}
+.camiseta2{
+  width: 150px;
+}
+.bloque-cuadrado {
+  position: relative;
+  width: fit-content;
+}
+
+.cuadrado {
+  width: 150px;
+  display: block;
+}
+
+.camiseta3 {
+  position: absolute;
+  top: -10px;     /* ajusta para subirla encima */
+  left: 420px;     /* ajusta para que esté al lado del cuadrado */
+  width: 120px;
+}
+
+
+
+/**Texto derecha  BLOQUE 1 Y 2*/
+.section-derecha1{
+    float: left;
+    width: 30%; /* o ajusta según el espacio que quieras ocupar */
+    box-sizing: border-box;
+    padding-left: 80px;
+    box-sizing: border-box;
+   
+}
+
+.section-derecha2{
     float: right;
-    width: 40%; /* ajusta según tu diseño */
+    width: 30%; /* o ajusta según el espacio que quieras ocupar */
+  box-sizing: border-box;
+  padding-left: 40px;
+    box-sizing: border-box;
 }
+
 #inicial{
     color: #4127d4;
 }
@@ -128,19 +221,102 @@
 }
 
 
-/* Contenedor principal */
+/* Contenedor secundario */
 .bloque2 {
   width: 100%;
   overflow: hidden; /* para contener los floats */
   padding: 20px;
   box-sizing: border-box;
+  margin-top: 40px;
 }
 
-/**izquierda*/
+/**izquierda fotos BLOQUE 2 */
+.todo-izquierda2 {
+  float: left;
+  width: fit-content;
+  position: relative;
+   overflow: visible;
+}
+
+
 .movil{
-     float: left;
-    width: 30%; /* ajusta según tu diseño */
+  width: 300px;
+}
+
+.caja-superior-izquierda {
+  position: absolute;
+  top: 2px;
+  left: -5px;
+  width: 160px;
+  height: 180px;
+  background-color: #fcf9f9;
+  border-radius: 5px;
+  
+  
+}
+
+.icono-facebook {
+  width: 20px;
+  display: block;
+  margin-left: 8px;
+
 
 }
 
-/**derecha*/
+.zapas3 {
+  width: 150px;
+  margin-top: 15px; /* separa del icono */
+  margin-bottom: 15px;
+    margin-left: 4px;
+
+}
+
+.bolsa{
+  width: 20px;
+  margin-left: 8px;
+}
+
+
+.caja-inferior-derecha {
+  position: absolute;
+  bottom: 3px;
+  left: 100%;            /* lo coloca justo al borde derecho del móvil */
+  margin-left: -78px;     /* lo empuja un poco más hacia afuera */
+  width: 205px;
+  height: 250px;
+  background-color: #fffefe;
+  border-radius: 5px;
+  z-index: 10;
+  padding: 20px;
+}
+
+.iconos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icono-google{
+   width: 20px;
+   display: block;
+  margin-left: 4px;
+}
+
+.icono-micro{
+   width: 20px;
+   display: block;
+    margin-left: 78px;
+}
+
+.zapatillas {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.zapas1{
+  width: 120px;
+}
+.zapas2{
+  width: 120px;
+}
