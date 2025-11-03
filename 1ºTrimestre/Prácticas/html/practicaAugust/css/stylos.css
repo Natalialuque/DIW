@@ -1,0 +1,112 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Cabecera general */
+.cabecera {
+  background-color: #f3f0f0;
+  padding: 12px 32px;
+  border-radius: 40px;
+  border: 1px solid #c5c2c2;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin: 16px auto;
+  max-width: 1200px;
+}
+
+/* Contenedor principal */
+.contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.imagenLogo {
+  width: 120px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* Barra de navegación */
+.barra1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-left: 40px;
+}
+
+/* Menú izquierdo centrado */
+.menu1 {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  margin: 0 auto; /* centra horizontalmente */
+}
+
+/* Estilo de enlaces del menú */
+.menu1 li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.95em;
+}
+
+/* Flecha solo en el primer ítem */
+.menu1 li:first-child a::after {
+  content: " ▼";
+  font-size: 0.8em;
+}
+
+/* Menú derecho */
+.menu2 {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin-left: auto;
+}
+
+/* Estilo de enlaces del menú derecho */
+.menu2 li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.95em;
+  line-height: 32px;
+}
+
+/* Botón destacado */
+#LoginBoton {
+  background-color: #4127d4;
+  color: white;
+  border: none;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.95em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+/* Banner informativo */
+.contenedor2 {
+  width: fit-content;
+  max-width: 90%;
+  margin: 24px auto;
+  padding: 6px 24px;
+  border: 2px solid #7c6fc5;
+  border-radius: 20px;
+  background-color: #fff;
+  font-weight: 500;
+  font-size: 0.95em;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
