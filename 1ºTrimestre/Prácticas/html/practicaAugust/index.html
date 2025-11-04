@@ -25,10 +25,56 @@
         </nav>
         </div>
     </header>
-    <main>
+    <main> 
+        <div class="pagina1">
         <div class="contenedor2">
             <p>Just rekeased:Insights from our Clinical Leaders Survey with ASHA</p>
         </div>
+            <h1 class="titulo1">The EHR plataform <br>caragivers love</h1>
+            <p class="texto1">August Health drives proactive care and uplevels <br> operations with our modern senior living platadorm</p>
+            <button class="LoginBoton2">Request Demo</button></li>
+            <figure>
+                <img src="./src/circulo1.png" alt="circulocentro" class="circulocentro">
+                <img src="./src/circulo2.png" alt="circulolado" class="circulolado">
+            </figure>
+        </div>
+        <div class="curva">
+            <svg viewBox="0 0 1200 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Máscara con degradado de opacidad que va de opaco arriba a transparente abajo -->
+                <defs>
+                    <linearGradient id="fadeDown" x1="0" x2="0" y1="0" y2="1">
+                        <!-- stop-opacity controla la opacidad de la forma en cada punto -->
+                        <stop offset="0%" stop-color="#f3eae0" stop-opacity="1" />
+                        <stop offset="60%" stop-color="#f3eae0" stop-opacity="1" />
+                        <stop offset="100%" stop-color="#f3eae0" stop-opacity="0" />
+                    </linearGradient>
+
+                    <!-- Alternativa: usar un mask para que la forma se dibuje y luego la máscara controle la transparencia -->
+                    <mask id="maskFade">
+                        <!-- fondo negro (completamente transparente), luego rectángulo con degradado blanco -> opaco -->
+                        <rect x="0" y="0" width="1200" height="160" fill="url(#alphaGradient)" />
+                    </mask>
+
+                    <!-- Gradiente de alfa para la máscara (blanco = visible, negro = invisible) -->
+                    <linearGradient id="alphaGradient" x1="0" x2="0" y1="0" y2="1">
+                        <stop offset="0%" stop-color="white" stop-opacity="1" />
+                        <stop offset="70%" stop-color="white" stop-opacity="1" />
+                        <stop offset="100%" stop-color="white" stop-opacity="0" />
+                    </linearGradient>
+                </defs>
+
+                <path d="M0,0 C300,140 900,140 1200,0 L1200,160 L0,160 Z" fill="url(#fadeDown)" />
+            </svg>
+        </div>
+        <div class="pagina1_1">
+          <h3 class="textoDebajo">Trusted by leading senior living operators</h3>
+        <div class="contenedor3">
+            <p>THE PLATFORM </p>
+        </div>
+        <h1 class="titulo2">Get to Know us</h1>
+        
+        </div>
+
         
     </main>
 </body>

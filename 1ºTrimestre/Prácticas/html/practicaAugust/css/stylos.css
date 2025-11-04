@@ -8,7 +8,7 @@
 
 /* Cabecera general */
 .cabecera {
-  background-color: #f3f0f0;
+  background-color: #ffffff;;
   padding: 12px 32px;
   border-radius: 40px;
   border: 1px solid #c5c2c2;
@@ -92,7 +92,7 @@
   font-weight: bold;
   cursor: pointer;
   font-size: 0.95em;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
 }
 
@@ -104,9 +104,118 @@
   padding: 6px 24px;
   border: 2px solid #7c6fc5;
   border-radius: 20px;
-  background-color: #fff;
+  background-color: #ffffff;
   font-weight: 500;
   font-size: 0.95em;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+  margin-top: -20px;
+}
+
+/********************************************************************/
+/*pagina 1**/
+.pagina1 {
+  width: 100%;               /* o el ancho que necesites */
+  min-height: 600px;               /* Altura mínima más razonable */  background-color: #ebd9d9; /* color de fondo opcional */
+  /* border-bottom-left-radius: 100px;  NO SIRVE POR LO DE CURVA 
+  border-bottom-right-radius: 100px; */
+  padding: 20px;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  background-color: #ffffff;
+  text-align: center;
+  
+
+}
+
+.curva {
+  position: relative;
+  width: 100%;
+  height: 215px;
+  overflow: hidden;
+  margin-top: -140px; /* Ajusta para que se solape con el borde redondeado */
+  z-index: 0;
+}
+
+.curva svg {
+  display: block;
+  width: 100%;
+  height: 99%;
+}
+
+
+
+.titulo1{
+  text-align: center;
+    margin-top: 30px;
+
+}
+
+.texto1{
+    text-align: center;
+    margin-top: 40px;
+
+}
+
+.LoginBoton2{
+background-color: #4127d4;
+  color: white;
+  border: none;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.95em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 90px;
+}
+
+.circulocentro {
+  position: absolute;
+  bottom: -200px; /* Ajusta según el tamaño de la imagen */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px; /* Ajusta según tu diseño */
+  z-index: 2;
+}
+
+.circulolado {
+  position: absolute;
+  top: 80%;
+  right: -50px; /* Ajusta según el tamaño de la imagen */
+  transform: translateY(-50%);
+  width: 300px; /* Ajusta según tu diseño */
+}
+
+/*********************************************************************/
+.pagina1_1{
+  align-items: center;
+}
+
+
+.textoDebajo{
+  margin-top: 0;
+  text-align: center;
+}
+
+.contenedor3{
+  width: fit-content;
+  border: 1px solid #71707a;
+  border-radius: 20px;
+  background-color: #ffffff;
+  font-weight: 500;
+  font-size: 0.95em;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  margin: 140px auto;
+
+}
+
+.titulo2{
+  text-align: center;
+  margin-top: -120px;
 }
