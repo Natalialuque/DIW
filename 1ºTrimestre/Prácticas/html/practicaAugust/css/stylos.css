@@ -219,3 +219,47 @@ background-color: #4127d4;
   text-align: center;
   margin-top: -120px;
 }
+
+/**BLOQUES FLOTANTES */
+.feature {
+  background: linear-gradient(to right, #ffffff, #eef1f5);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.feature:hover {
+  transform: translateY(-2px);
+}
+
+.feature h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #2c3e50;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.arrow-button {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  background: none;
+  border-radius: 14px #408be0;
+  background-color: rgb(210, 210, 221);
+  font-size: 1.5rem;
+  color: #408be0;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.arrow-button:hover {
+  transform: translateX(4px);
+}
