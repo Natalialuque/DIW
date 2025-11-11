@@ -6,11 +6,11 @@
   font-family: 'Inter', sans-serif;
 }
 
-/* Cabecera general */
+/* Cabecera y contenedor */
 .cabecera {
-  background-color: #ffffff;;
-  padding: 12px 32px;
-  border-radius: 40px;
+  padding: 20px 40px;
+    border-radius: 40px;
+background-color: #ffffff;;
   border: 1px solid #c5c2c2;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
   position: sticky;
@@ -20,8 +20,9 @@
   max-width: 1200px;
 }
 
-/* Contenedor principal */
 .contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,72 +30,100 @@
 
 /* Logo */
 .imagenLogo {
-  width: 120px;
-  height: auto;
-  flex-shrink: 0;
+  height: 40px;
+  display: block;
+  object-fit: contain;
 }
 
 /* Barra de navegación */
 .barra1 {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+/* Menús */
+.menu1, .menu2 {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-grow: 1;
-  margin-left: 40px;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* Menú izquierdo centrado */
 .menu1 {
-  display: flex;
-  list-style: none;
-  gap: 32px;
-  margin: 0 auto; /* centra horizontalmente */
+  margin: 0 auto;
 }
 
-/* Estilo de enlaces del menú */
-.menu1 li a {
+.menu1 a, .menu2 a {
   text-decoration: none;
-  color: #333;
+  font-size: 1rem;
+  color: #1f2937;
   font-weight: 500;
-  font-size: 0.95em;
 }
 
-/* Flecha solo en el primer ítem */
-.menu1 li:first-child a::after {
-  content: " ▼";
-  font-size: 0.8em;
-}
-
-/* Menú derecho */
-.menu2 {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-  margin-left: auto;
-}
-
-/* Estilo de enlaces del menú derecho */
-.menu2 li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  font-size: 0.95em;
-  line-height: 32px;
-}
-
-/* Botón destacado */
+/* Botón principal */
 #LoginBoton {
-  background-color: #4127d4;
+  background-color: #3b82f6;
   color: white;
   border: none;
-  padding: 6px 18px;
-  border-radius: 20px;
-  font-weight: bold;
+  border-radius: 999px;
+  padding: 8px 20px;
+  font-size: 0.95rem;
   cursor: pointer;
-  font-size: 0.95em;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
 }
+
+#LoginBoton:hover {
+  background-color: #2563eb;
+}
+
+/* Submenú funcional */
+.submenu-container {
+  position: relative;
+}
+
+.platform-submenu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  background-color: #f9fafb;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 400px;
+}
+
+/* Mostrar submenú al pasar el mouse */
+.submenu-container:hover .platform-submenu {
+  display: block;
+}
+
+/* Estilo de cada ítem del submenú */
+.submenu-item {
+  margin-bottom: 16px;
+}
+
+.submenu-item h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 4px;
+}
+
+.submenu-item p {
+  font-size: 0.9rem;
+  color: #374151;
+  margin: 0;
+}
+
+
 
 /* Banner informativo */
 .contenedor2 {
@@ -221,45 +250,299 @@ background-color: #4127d4;
 }
 
 /**BLOQUES FLOTANTES */
+.features-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden; /* para contener los floats */
+}
+
+/* Estilo base para cada feature */
 .feature {
-  background: linear-gradient(to right, #ffffff, #eef1f5);
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  width: 45%;
+  background-color: #9e9e9e;
+  border: 1px solid #dcdfe6;
+  border-radius: 10px;
   padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin: 1rem 2.5%;
+  box-sizing: border-box;
   position: relative;
-  transition: transform 0.2s;
+  transition: background-color 0.2s;
 }
 
 .feature:hover {
-  transform: translateY(-2px);
+  background-color: #c1c1c1;
 }
 
-.feature h2 {
-  margin-top: 0;
-  font-size: 1.4rem;
-  color: #2c3e50;
+/* Flotantes izquierda y derecha */
+.left {
+  float: left;
 }
 
-.feature p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 1rem;
+.right {
+  float: right;
 }
 
+/* Elemento centrado */
+.center {
+  clear: both;
+  float: none;
+  margin: 2rem auto;
+  width: 50%;
+  text-align: center;
+}
+
+/* Botón de flecha */
 .arrow-button {
   position: absolute;
   right: 1.5rem;
   bottom: 1.5rem;
+<<<<<<< HEAD
   background: none;
   border-radius: 14px ;
+=======
+>>>>>>> 8d596c8faf04e5cfeeaba4e48f0bc95b6be00231
   background-color: rgb(210, 210, 221);
-  font-size: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.2rem;
   color: #408be0;
   cursor: pointer;
   transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .arrow-button:hover {
   transform: translateX(4px);
+}
+
+/**PAGINA 2*/
+.pagina2 {
+  background-color: #1f3280;
+  padding: 4rem 2rem;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #2c3e50;
+  text-align: center;
+}
+
+ .contenedor4 {
+  display: inline-block;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 0.2rem; /* más pequeño */
+  font-weight: 50;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem; /* menos espacio interno */
+  border: 1.5px solid #ffffff; /* borde blanco más fino */
+  border-radius: 16px; /* sigue siendo redondeado */
+  letter-spacing: 0.8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+  width: 160px;
+
+}
+
+
+
+
+
+
+
+.pagina2 h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+color: white;
+}
+
+.pagina2 p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+color: white;
+}
+
+/**CAJAS COLORES*/
+
+
+.pagina2_2 {
+  background-color:transparent; /* fondo general azul oscuro */
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* CONTENEDOR con borde punteado multicolor */
+.bloque_cajas {
+  border: 4px dotted;
+  border-image: linear-gradient(90deg, #4caf50, #f57c00, #6a1b9a) 1;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 700px;
+  width: 100%;
+  background-color: transparent; /* sin fondo para que se vean las cajas */
+}
+
+/* CAJAS individuales con fondo personalizado */
+.div {
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Fondos individuales */
+.uno {
+  background-color: #4caf50; /* verde */
+}
+
+.dos {
+  background-color: #f57c00; /* naranja */
+}
+
+.tres {
+  background-color: #6a1b9a; /* morado */
+}
+
+/* Tipografía */
+.div h1 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.div p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/**PAGINA 2_3*/
+.pagina2_3{
+  background-color: white;
+  padding: 20px;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.contenedor5{
+  width: fit-content;
+  border: 1px solid #71707a;
+  border-radius: 20px;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 0.9em;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  margin: 20px auto; /* antes era 130px */
+  border-bottom: 5px;
+
+}
+
+.pagina2_3 h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  text-align: center;
+}
+
+.pagina2_3 p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+    text-align: center;
+
+}
+
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.panel {
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+/* Colores de fondo */
+.blue { background-color: #3b82f6; }
+.pink { background-color: #ec4899; }
+.green { background-color: #10b981; }
+.orange { background-color: #f97316; }
+
+/* Textos específicos */
+.negro { color: black; }
+.blanco { color: white; }
+
+/* Títulos */
+.panel h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  position: relative;
+}
+
+/* Línea divisoria entre h2 y p */
+.panel h2::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 12px 0;
+}
+
+/* Párrafos */
+.panel p {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+/* Botón flecha con borde redondeado y color */
+.arrow-button2 {
+  align-self: flex-end;
+  background-color: transparent;
+  border: 2px solid currentColor;
+  border-radius:999px ; /* Súper redondeado */
+  padding: 6px 14px;
+  font-size: 1.2rem;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+
+.arrow-button2:hover {
+  transform: translateX(4px);
+  background-color: rgba(255, 255, 255, 0.2);
 }
