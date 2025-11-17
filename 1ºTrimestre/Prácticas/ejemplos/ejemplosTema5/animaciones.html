@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacines</title>
+    <style>
+        p{
+            width: fit-content;/*adapta la anchura del contenedor al contenido*/
+            transform-origin:center;
+            position: relative;
+            animation-name: slidein;
+            animation-duration: 3s;
+            animation-fill-mode:forwards; 
+        }
+
+        @keyframes slidein {
+         
+            0%{
+                color: blue;
+                left: 100%;
+            }
+            33%{
+                left: 50%;
+                transform: rotate(0deg);
+            }
+            66%{
+                left: 50%;
+                transform: rotate(360deg);
+            }
+
+            100%{
+                color: red;
+                left:0%;
+                 transform: rotate(365deg);
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>texto cualquiera</p>
+</body>
+</html>

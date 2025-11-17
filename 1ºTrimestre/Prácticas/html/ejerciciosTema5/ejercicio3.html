@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .contenedorGeneral {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  background-color: #474242;
+}
+
+.caja1,
+    .caja2 {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;        /* color inicial */
+      transition: background-color 0.5s ease; /* transición base */
+    }
+
+/* Primera caja: cambio inmediato */
+.contenedorGeneral:hover .caja1 {
+  background-color: rgb(206, 42, 13);
+  transition-delay: 0s; /* sin retraso */
+}
+
+/* Segunda caja: cambio con retraso */
+.contenedorGeneral:hover .caja2 {
+  background-color: rgb(39, 128, 79);
+  transition-delay: 0.3s; /* retraso de 0.3 segundos */
+}
+
+</style>
+<body>
+    <!-- 3. Crea un div contenedor y dentro de él dos div pequeños (cajas). Al hacer
+    :hover sobre el contenedor, la primera caja debe cambiar su color de fondo
+    inmediatamente, y la segunda caja debe cambiar su color de fondo después de un
+    retraso de 0.3 segundos. -->
+
+    <div class="contenedorGeneral">
+        <div class="caja1"></div>
+        <div class="caja2"></div>
+    </div>
+
+</body>
+</html>
