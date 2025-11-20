@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+        .Caras{
+        width: 180px;
+        height: 140px;
+    }
+    .cara1{
+        background-color: aqua;
+        backface-visibility: hidden;
+        background-color: bisque;
+    }
+
+    .cara2{
+        background-color: aqua;
+        backface-visibility: hidden;
+        background-color: bisque;
+
+
+    }
+
+
+    .Caras:hover{
+        transform:rotateY(180deg) ;
+        transition: transform 0.8s ease-in-out;
+        transform-style: preserve-3d;
+    }
+</style>
+
+<body>
+    <!-- 9. Crea una tarjeta con una cara frontal y una cara trasera. Al hacer :hover sobre el
+    contenedor, la tarjeta debe girar 180 grados sobre el eje Y para mostrar la cara trasera. --> 
+
+    <div class="Caras">
+        <p class="cara1">CARA1</p>
+        <p class="cara2">CARA2</p>
+    </div>
+</body>
+</html>
