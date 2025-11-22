@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .circulo {
+    border-radius: 80%;
+    background-color: rgb(85, 126, 115);
+    width: 150px;
+    height: 150px;
+    animation-duration: 2s;
+    animation-name: pulsar;
+    animation-iteration-count: infinite; /*animacion infinita*/
+    animation-direction: alternate;/*alternar de 0 a 100 y de 100 a 0 */
+    
+}
+
+@keyframes pulsar {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100%{
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+}
+</style>
+<body>
+    <!-- 12. Crea un círculo. Debe tener una animación llamada pulsar que dure 2
+        segundos, sea infinita y se alterne. La animación debe escalar el círculo de 1 a 1.1 y
+        cambiar su opacidad de 1 a 0.7. -->
+    
+
+    <div class="circulo">
+
+    </div>
+
+
+</body>
+</html>

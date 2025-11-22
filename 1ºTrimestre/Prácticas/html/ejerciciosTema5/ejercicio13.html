@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .titulo {
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-name: desliza;
+    width: fit-content;
+    position: relative;
+}
+
+@keyframes desliza {
+    0% {
+        left: 0%;
+    }
+
+    100%{
+        left: 50%;
+    }
+}
+
+</style>
+<body>
+    <!-- 13. Crea un título <h1>. Al cargar la página, debe aparecer deslizándose desde la
+    izquierda hasta su posición final, que será centrado dentro de una cabecera. La
+    animación debe durar 2 segundos y permanecer en su estado final.-->
+
+    <div>
+    <h1 class="titulo">HOLA</h1>
+    </div>
+
+</body>
+</html>

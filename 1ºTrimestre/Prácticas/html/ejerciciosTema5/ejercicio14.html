@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .pelota {
+    height: 200px;
+    width: 200px;
+    background-color: rgb(51, 242, 118);
+    border-radius: 80%;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-name: pelota;
+    animation-duration: 1.5s;
+}
+
+@keyframes pelota { 
+    0% {
+        transform: translate(0px);
+    }
+    50%{
+        transform: translate(0,-50px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+</style>
+<body>
+    <!-- 14. Crea una "pelota" (un div circular). Define una animación llamada botar que
+    simule un bote. 0%: en el suelo, 50%: en el aire, 100%: en el suelo. Haz que la
+    animación se repita infinitamente cada 1.5 segundos. -->
+
+    <div class="pelota"></div>
+
+</body>
+</html>
