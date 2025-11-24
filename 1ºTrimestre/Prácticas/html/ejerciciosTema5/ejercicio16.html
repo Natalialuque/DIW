@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.iconoMenu {
+  width: 100px;
+  height: 100px;
+}
+
+.iconoMenu .borde {
+  stroke: #000;
+  stroke-width: 6;
+  fill: none;
+}
+.iconoMenu .stroke {
+  stroke: #000;
+  stroke-width: 8;
+}
+
+.iconoMenu .linea {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+}
+
+.iconoMenu:hover .borde,
+.iconoMenu:hover .stroke { stroke: #164741; }
+
+.iconoMenu:hover .centro { opacity: 0; }
+
+.iconoMenu:hover .sup {
+    transform: translateY(20px)  rotate(45deg);  
+    } 
+    
+.iconoMenu:hover .inf { 
+    transform: translateY(-20px) rotate(-45deg); 
+} 
+</style>
+
+<body>
+    <!-- 16. Crea un icono de menú con svg en un lienzo de 100 x 100, consistente en 3 líneas
+horizontales, rodeadas por un cuadrado con bordes redondeados. Al hacer :hover,
+la línea central debe desaparecer, las otras dos, superior e inferior, posicionarse en el
+centro y rotar 45º para crear un aspa. Todo debe cambiar de color negro a rojo.  -->
+
+
+  <svg class="iconoMenu" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Menú">
+        <rect class="borde" x="6" y="6" width="88" height="88" rx="14" ry="14" />
+        <line class="stroke linea sup"    x1="25" y1="30" x2="75" y2="30" />
+        <line class="stroke linea centro" x1="25" y1="50" x2="75" y2="50" />
+        <line class="stroke linea inf"    x1="25" y1="70" x2="75" y2="70" />
+    </svg>
+</body>
+</html>

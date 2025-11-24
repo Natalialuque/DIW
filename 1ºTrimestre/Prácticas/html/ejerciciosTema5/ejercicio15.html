@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .cuadro {
+    height: 150px;
+    width: 150px;
+    background-color: rgb(65, 34, 219);
+    margin: 80px 80px;
+
+    animation-duration: 4s, 2s;
+    animation-name: girar, cambiarColor;
+    animation-iteration-count: infinite, infinite;
+    animation-timing-function: linear, normal;
+    animation-fill-mode: forwards, normal;
+}
+
+@keyframes girar {
+    0%{
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cambiarColor {
+    0%{
+        background-color: rgb(119, 58, 54);
+    }
+    100%{
+        background-color: rgb(49, 49, 118);
+    }
+}
+
+</style>
+<body>
+    <!-- 15. Crea un cuadrado. Aplica dos animaciones al mismo tiempo, llamadas:
+        • girar: debe rotar 360 grados continuamente (infinite, linear) cada 4 segundos.
+        • cambiarColor: debe cambiar el color de fondo de rojo a azul y viceversa
+        cada 2 segundos. -->
+
+        <div class="cuadro"></div>
+</body>
+</html>
