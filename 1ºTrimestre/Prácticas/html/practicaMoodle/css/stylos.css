@@ -23,7 +23,7 @@ body {
 /*Estilos cabecera general*/
 header{
     height: 15.5vh; 
-    overflow-y: auto;
+    overflow-y: auto; /*para el desbordamiento*/
     background-color: var(--color-blanco);
     box-shadow: 0 0 15px 5px var(--color-rgba);/*para el sombreado*/
     border-top: 3px solid var(--color-primario); /*para la linea de arriba*/
@@ -37,7 +37,7 @@ header .flotanteIzquierdaGeneral {
 
 /*estilo instituto y los enlaces*/
 header .floanteIzquierda {
-    display: inline-block; 
+    display: inline-block;  /*se alinea horizontalmente*/
     padding: 0 80px;
 }
 
@@ -45,11 +45,11 @@ header .floanteIzquierda {
 header .floanteIzquierda a {
     position: relative;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.2em; /*tamaño fuente*/
     color: black;
     margin-right: 30px;
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
+    font-optical-sizing: auto; /*ajuste de letras al navegador*/
     font-weight: 400;
     font-style: normal;    
 }
@@ -76,8 +76,8 @@ header .floanteIzquierda a::after {
     transition: all 0.4s ease-out;
 }
 
-/*aparece la línea hacía arriba a posicionarnos sobre los enlaces*/
-/*no se puede dejar remarcada la sección seleccionada, ya qu deberías hacerlo en javascript*/
+/*aparece la línea hacía arriba a posicionarnos sobre los enlaces
+no se puede dejar remarcada la sección seleccionada, ya qu deberías hacerlo en javascript*/
 header .floanteIzquierda a:hover::after {
     height: 4px;
     opacity: 1;
@@ -102,7 +102,7 @@ header .flotanteDerechaGeneral{
 
 /*icono de ayuda svg*/
 header .flotanteDerechaGeneral .ico-ayuda {
-    display: inline;
+    display: inline; /*alinea en linea*/
     width: 4%;
     margin: 0 25px;
 }
@@ -190,4 +190,242 @@ header .flotanteDerechaGeneral .btn-editar:hover .btn-edit-fondo {
 
 
 
+/**DIV PRINCIPAL**/
+.principal{
+    height: 95vh;
+    position: relative;
+}
+
+.principal h2{
+    background-color: var(--color-fondo);
+    color: rgb(58, 58, 58)  ;
+}
+
+.principal main{
+    width: auto;
+    height: 95%;
+    margin: 0 30px;
+    background-color: var(--color-blanco);
+    border-radius: 15px;
+}
+
+.principal h3{
+    color: var(--color-primario);
+    font-size: 35px;
+    font-family:"Roboto", sans-serif;
+}
+
+/*Botón nombre del curso*/
+/*no tiene lista desplegable, la podéis añadir vosotros y practicar eso*/
+.principal main .nom-curso {
+    position: relative;
+    width: fit-content;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding: 12.5px 15px;
+    padding-right: 35px;
+    border-radius: 10px;
+    margin-left: 15px;
+    transition: background-color 0.5s ease;
+}
+
+/*cambia el color del botón nombre del curso al hacer :hover*/
+.principal main .nom-curso:hover {
+    background-color: var(--color-secundario);
+    cursor: pointer;
+}
+
+/*reposiciono la flecha que hay a la derecha de nombre del curso para que se parezca más a la página de moodle*/
+.principal main .nom-curso .nom-curso-flecha {
+    position: absolute;
+    top: 7px;
+    right: 13px;
+}
+
+/*AGRUPAMOS LOS 3 CURSOS CON SUS IMAGENES Y DEMAS*/
+.principal main .agrupa3clases {
+    margin: 12.5px 15px;
+    text-align: center;
+}
+
+/*estilos para cada tarjeta de curso*/
+.principal main .agrupa3clases .curso {
+    position: relative;
+    display: inline-block; /*PARA COLOCARSE EN LINEA CON LOS OTROS ELEMENTOS*/
+    margin: 0 2px;
+    width: 30%;
+    height: 350px;
+    border-radius: 10px;
+    border: 1px solid var(--color-rgba) /*BORDE PARA DIVIDIRLAS*/
+}
+
+/*la foto del curso, ocupando un 50% del contenedor*/
+.principal main .agrupa3clases .curso .curso-foto {
+    border-radius: 10px;
+    border: 0.5px solid var(--color-rgba);
+    height: 50%;
+    width: 100%;
+    object-fit: cover; /*hace que la imagen se recorte al tamaño del contenedor y no se deforme*/
+}
+
+/*al hacer :hover cambia la opacidad de la foto del curso*/
+.principal main .agrupa3clases .curso:hover .curso-foto{
+    opacity: 0.7;
+}
+
+/*flecha azul que no está visible, posicionada en el centro de la imagen del curso*/
+.principal main .agrupa3clases .curso .curso-flecha {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 35%;
+    height: 35%;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%); /*translada el gizmo de transformación al centro del propio objeto*/
+    cursor: pointer;
+}
+
+/* al hacer :hover sobre la imagen del curso, cambia el icono del ratón*/
+.principal main .agrupa3clases .curso .curso-foto:hover {
+    cursor: pointer;
+}
+
+/* al hacer :hover sobre la tarjeta del curso, se muestra la flecha que, en un principio, estaba oculta*/
+.principal main .agrupa3clases .curso:hover .curso-flecha{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+/*nombre del curso*/
+.cuerpo main .agrupa3clases .curso .curso-nom {
+    font-size: 1.2em;
+    color: var(--color-primario);
+}
+
+/*cada una de las 5 opciones que aparece abajo de cada tarjeta de curso*/
+.principal main .agrupa3clases .curso .curso-opciones {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 20%;
+    height: 25%;
+    border: 1px solid var(--color-rgba);
+    background-color: var(--color-gris-claro);
+    transition: all 0.2s ease;
+}
+
+/*al hacer :hover sobre las opciones cambia el color de fondo*/
+.principal main .agrupa3clases .curso .curso-opciones:hover {
+    background-color: var(--color-primario);
+}
+
+/*al hacer :hover sobre las opciones, cambia el color del texto de cada opción*/
+.principal main .agrupa3clases .curso .curso-opciones:hover p {
+    color: var(--color-fondo);
+}
+
+/* al hacer :hover sobre las opciones, cambia el color de cada icono que es un svg*/
+.principal main .agrupa3clases .curso .curso-opciones:hover .curso-objeto {
+    /*las imágenes y svg creados no se pueden cambiar de color con propiedades CSS, por tanto, para */
+    /*conseguir ese efecto se deben aplicar filtros para obtener el color "deseado*/
+    /*hay una página que te crea el filtro necesario para el color que le indiques*/
+    /*es esta https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(93%) sepia(89%) saturate(4179%) hue-rotate(185deg) brightness(131%) contrast(94%);
+}
+
+/*para ir posicionando, de forma independiente cada opción de cada curso*/
+/*para ello, todas las opciones tiene la clase curso-opciones, para los estilos globales comunes a cada una de ellas*/
+/*y una clase independiente para cada una llamadas curso1, 2, 3, 4 y 5, para los estilos particulares*/
+/*la primera totalemente a la izquierda con un borde inferior izquierdo*/
+.principal main .agrupa3clases .curso .co-curso1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 5px;
+}
+
+/*la segunda a un 20% de la izquierda*/
+.principal main .agrupa3clases .curso .co-curso2 {
+    position: absolute;
+    bottom: 0;
+    left: 20%;    
+}
+
+/*la tercera al 40% de la izquierda*/
+.principal main .agrupa3clases .curso .co-curso3 {
+    position: absolute;
+    bottom: 0;
+    left: 40%;    
+}
+
+/*la cuarta al 60% de la izquierda, también valdría a un 40% de la derecha*/
+.principal main .agrupa3clases .curso .co-curso4 {
+    position: absolute;
+    bottom: 0;
+    left: 60%;    
+}
+
+/*la quita totalmente a la derecha*/
+.principal main .agrupa3clases .curso .co-curso5 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-bottom-right-radius: 5px;
+}
+
+/*todos lo svg tiene la misma altura, 21 mm, por ello, para dimensionarlos todo iguales en altura, he usado height del 40%, en lugar de width*/
+.principal main .agrupa3clases .curso .curso-opciones .curso-objeto {
+    height: 40%; /* al tener todos la misma altura, los redimensiono con height*/
+    margin-top: 10px;
+}
+
+/*texto bajo el icono de cada opción*/
+.principal main .agrupa3clases .curso .curso-opciones p {
+    color: var(--color-primario);
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+/*ESTILOS FOOTER*/
+
+/*footer, fijado abajo, de forma que, si aparece una barra de scroll, el footer siempre permance visible en la parte inferior*/
+footer {
+    position: fixed; /* para que aparezca siempre visible en la parte inferior*/
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 12.5vh;
+    background-color: var(--color-primario);
+}
+
+/*ubicación de los logos*/
+footer .logo-eu {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 15%;
+    height: 65%;
+}
+
+footer .logo-esp {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 35%;
+    height: 65%;
+    padding-right: 15px;
+    border-right: 1px solid var(--color-blanco);
+}
 
