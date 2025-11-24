@@ -1,0 +1,193 @@
+
+/*reinicio de propiedades*/
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+    /*variables para los colores*/
+    --color-primario: #23407b;
+    --color-secundario: #88b1cd;
+    --color-gris-claro: #f7f7f7;
+    --color-fondo: #eef2f5;
+    --color-rgba: rgba(0,0,0,0.1);
+    --color-blanco: white;
+
+    background-color: var(--color-fondo);
+}
+
+/* CABECERA */
+
+/*Estilos cabecera general*/
+header{
+    height: 15.5vh; 
+    overflow-y: auto;
+    background-color: var(--color-blanco);
+    box-shadow: 0 0 15px 5px var(--color-rgba);/*para el sombreado*/
+    border-top: 3px solid var(--color-primario); /*para la linea de arriba*/
+    margin-top: 2px;
+}
+
+/*Parte Izquierda*/
+header .flotanteIzquierdaGeneral {
+    float: left; /*flotante a la izquierda*/
+}
+
+/*estilo instituto y los enlaces*/
+header .floanteIzquierda {
+    display: inline-block; 
+    padding: 0 80px;
+}
+
+/*estilos  enlaces*/
+header .floanteIzquierda a {
+    position: relative;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: black;
+    margin-right: 30px;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;    
+}
+
+/*estilo del nombre del instituto*/
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;  
+}
+
+/*para la línea que hay bajo los enlaces, igual que el ejercicio de la línea horizontal que aparece,
+pero en vertical, con height a 0 en un principio*/
+header .floanteIzquierda a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    opacity: 0;
+    background-color: var(--color-primario);
+    transition: all 0.4s ease-out;
+}
+
+/*aparece la línea hacía arriba a posicionarnos sobre los enlaces*/
+/*no se puede dejar remarcada la sección seleccionada, ya qu deberías hacerlo en javascript*/
+header .floanteIzquierda a:hover::after {
+    height: 4px;
+    opacity: 1;
+    transition: height 0.4s ease-out;
+}
+
+/*logo svg de la moodle*/
+header .flotanteIzquierdaGeneral .logotipo {
+    padding: 0 20px 0 10px;
+    border-right: 2px solid var(--color-primario);
+}
+
+
+
+/*Estilos parte derecha cabecera*/
+header .flotanteDerechaGeneral{
+    float: right;
+    width: 40%;
+    margin-top: 30px;
+    text-align: right;
+}
+
+/*icono de ayuda svg*/
+header .flotanteDerechaGeneral .ico-ayuda {
+    display: inline;
+    width: 4%;
+    margin: 0 25px;
+}
+
+/*icono de la campana svg*/
+header .flotanteDerechaGeneral .ico-campana {
+    display: inline;
+    width: 4%;
+}
+
+/*div donde se ubica el circulo del usuario y el icono de la flecha hacia abajo*/
+header .flotanteDerechaGeneral .usuario {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    align-items: center;
+    background-color: var(--color-primario);
+    color: white;
+    margin: 0 50px 0 25px;
+    font-weight: bold;
+}
+
+/*posicionamos el span con el nombre del usuario en el centro del div padre*/
+header .flotanteDerechaGeneral .usuario .usu-nom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1em;
+}
+
+/*posicionamos la flecha hacía abajo a la derecha del circulo con el nombre de usuario*/
+header .flotanteDerechaGeneral .usuario .usu-flecha {
+    position: absolute;
+    top: 50%;
+    right: -65%;
+    transform: translate(-50%,-50%);
+    color: var(--color-primario);
+}
+/*estilos texto Modo edición*/
+header .flotanteDerechaGeneral .mod-edit{
+    font-size: 1.2em;
+    padding-right: 10px;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal; 
+}
+/*estilos del svg que simula un botón de editar*/
+header .flotanteDerechaGeneral .btn-editar {
+    padding: 0;
+    margin-bottom: -8px;
+    margin-right: 40px;
+    width: 7.5%;
+    height: 7.5%;
+}
+
+/*dentro del svg con el botón de editar se pueden seleccionar los elementos independientemente*/
+/*he seleccionado el <circle> que tiene la clase .btn-edit-circulo para modificar si origen */
+/*de coordenadas y hacer que pase de la esquina superior izquierda al centro del propio objeto*/
+header .flotanteDerechaGeneral .btn-editar .btn-edit-circulo {
+    transform-origin: center; /*centra en el lienzo svg*/
+    transform-box: fill-box; /*indica que el centro no sea el del lienzo si no la caja del propio objeto svg, en este caso el <circle>*/
+    transition: all 0.25s ease;
+}
+
+/*creamos una transición independiente para el color de fondo del svg*/
+header .flotanteDerechaGeneral .btn-editar .btn-edit-fondo {
+    transition: all 0.25s ease;
+}
+
+/*al hacer :hover sobre el botón, cambiamos el color del círculo a blanco y lo desplazamos a la derecha*/
+header .flotanteDerechaGeneral .btn-editar:hover .btn-edit-circulo {
+    fill: var(--color-blanco);
+    transform: translateX(50px);
+}
+
+/*cambiamos el color del fondo del svg al hacer :hover*/
+header .flotanteDerechaGeneral .btn-editar:hover .btn-edit-fondo {
+    stroke: var(--color-primario);
+    fill: var(--color-primario);
+}
+
+
+
+
