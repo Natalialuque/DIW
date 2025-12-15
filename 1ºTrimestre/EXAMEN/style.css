@@ -1,0 +1,286 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+    /*varaibles colores*/
+    --color-naranja: #ff6600;
+    --color-negro: #444;
+    --color-blanco: white;
+    --color-gris: #f4f4f4;
+    --color-rosa: lightpink ;
+}
+
+/**CABECERA*/
+header{
+    background-color: var(--color-negro);
+    height: 13.5vh; 
+    display: inline-block;
+    width: 100%;
+    color: var(--color-blanco);
+    border-radius: 5px;
+
+}
+/*Izquierda*/
+header .header-flota-izq{
+    float: left;
+}
+
+header .header-flota-izq object{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    transition: transform .5s ease-in-out; /* duración y tipo de transición */
+    margin-top: 15px;
+    margin-bottom: 39px;
+    margin-left: 100px;
+    filter: invert(412%) sepia(0%) saturate(1797%) hue-rotate(359deg) brightness(99%) contrast(110%);
+
+}
+
+/* @keyframes girar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+} */
+
+header .header-flota-izq:hover{
+    filter: invert(42%) sepia(87%) saturate(1797%) hue-rotate(359deg) brightness(99%) contrast(110%);
+}
+
+
+
+header .header-flota-izq object:hover{
+        transform: rotate(360deg); /* giro completo */
+}
+
+
+
+header .header-flota-izq h1{
+    display: inline-block;  /*se alinea horizontalmente*/
+    padding: 20px;
+    margin-top: 10px;
+    color:var(--color-blanco);
+    transition: all .5s ease-in-out;
+    overflow:hidden;
+    /* animation-duration: 3s; 
+    animation-name: aparecer; */ /*Me lo aplica a tood y no entiend porque*/
+} 
+
+
+/*derecha*/
+header .header-flota-der{
+    float: right;
+}
+
+header .header-flota-der li{
+    display: inline-block;
+    padding: 5px;
+    margin-right: 60px;
+    margin-top: 20px;
+}
+
+header .header-flota-der a{
+    color: var(--color-blanco);
+}
+
+
+header .header-flota-der a::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    opacity: 0;
+    background-color: var(--color-naranja);
+    transition: all 0.4s ease-out;
+}
+
+
+
+header .header-flota-der a:hover::after {
+    height: 4px;
+    opacity: 8;
+    transition: height 0.4s ease-out;
+}
+
+
+
+/*PIE DE PAGINA**/
+footer{
+     clear: both; 
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    text-align: center;
+    height: 5vh; 
+
+}
+
+
+/**PRIMER PAGINAA*/
+.servicios{
+    background-color: var(--color-blanco);
+    text-align: center;
+    padding: 53px;
+}
+
+/*titulo*/
+.servicios h2{
+    text-align: center;
+    color: var(--color-negro);
+    transition: all 0.5s ease;
+}
+
+.servicios h2:first-child::first-letter{
+    font-size: 2em;
+    color: var(--color-naranja);
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: underline;
+}
+
+/*tarjetas*/
+
+
+.servicios .tarjeta{
+    display: inline-block;
+    margin: 30px;
+    background-color: var(--color-gris);
+    width: 390px;
+    height: 290px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 25px;
+
+}
+
+.servicios .tarjeta a{
+    color: var(--color-gris);
+    text-align: center;
+    position:relative;
+    padding-block: 10px;
+
+}
+
+
+.servicios .tarjeta:hover{
+    background-color: var(--color-rosa);
+    color: var(--color-blanco);
+    transform: scale(110%);
+    border-radius: 4px;
+    box-shadow: 5px var(--color-negro);
+        box-shadow: 0 0 10px 5px var(--color-negro);/*para el sombreado*/
+
+}
+
+.servicios .tarjeta .texto-tarjeta a:hover{
+    color:var(--color-blanco);
+    display: inline;
+}
+
+/*****************************************************************************************************/
+
+/*PAGINA 2*/
+.contenedor{
+    background-color: var(--color-blanco);
+    margin-left: 100px
+}
+
+.contenedor h2{
+    color: var(--color-negro);
+    font-weight: bold;
+    overflow:hidden;
+    animation-duration: 1s; 
+    animation-name: aparecer;
+}
+
+@keyframes aparecer { 
+    from { 
+      margin-top: 100%; 
+    } 
+   
+    to { 
+      margin-top: 0%; 
+    } 
+} 
+
+
+.contenedor h2:first-child::first-letter{
+    font-size: 2em;
+    color: var(--color-naranja);
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: underline;
+}
+
+
+.contenedor img{
+    width: 450px;
+    height: 450px;
+    margin-bottom: 100px;
+}
+
+.contenedor img:hover{
+        transform: translateX(5px) scale(1.1) rotate(5deg);
+        filter: sepia(100%);
+        opacity: 55%;
+}
+
+/*****************************************************************************************************/
+
+/*CONTENEDOR 3*/
+.contenedor{
+    background-color: var(--color-blanco);
+    margin-left: 100px;
+    margin-bottom: 305px;
+}
+.contenedor form label{
+    display: block;
+}
+
+input[type="text"], input[type="email"]{ 
+    width: 80%; 
+    padding: 5px; 
+}
+
+textarea[id="mensaje"] {
+    width: 79%; 
+    padding: 15px; 
+}
+
+input[type='email']:required:hover, input[type='text']:required:hover,textarea[id="mensaje"]:required:hover{
+    border: 3px solid var(--color-naranja);
+}
+
+
+
+button[type="submit"]{
+    display: block;
+}
+
+.contenedor form button{
+    background-color: var(--color-naranja);
+    color: var(--color-blanco);
+    border-radius: 7px;
+    border: 7px solid var(--color-naranja);
+    padding: 8px;
+    box-shadow: 0 0 15px 5px var(--color-negro);/*para el sombreado*/
+    
+}
+
+.contenedor form button:hover{
+    background-color: var(--color-blanco);
+    color: var(--color-naranja);
+    border-radius: 7px;
+    border: 2px solid var(--color-naranja);
+    padding: 10px;
+}
+
+
+.contenedor form input[type="text"]:focus{
+    color: var(--color-naranja);
+}

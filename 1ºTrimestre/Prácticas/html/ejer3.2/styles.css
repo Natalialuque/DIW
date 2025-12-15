@@ -173,10 +173,10 @@ tbody tr:nth-child(odd){
 }
 /*Ejercicio 10. Haz que, en la tabla, la primera columna (la de los nombres de los nutrientes) debe tener
 el texto alineado a la derecha. */
-
 tbody tr td:first-child, thead tr th:first-child{
     text-align: right;
 }
+
 
 /*Ejercicio 11. El aside contiene dos div y un p vacío al final. Selecciona únicamente los <p> que sean el
 único hijo dentro de su div padre y ponles un borde punteado a la izquierda del color
@@ -185,11 +185,13 @@ aside div p:only-child{
     border-left: 2px dotted var(--color-Secundario);
 }
 
+
 /*Ejercicio 12.  El párrafo que dejamos vacío a propósito (<p></p>) debe mostrar un mensaje que diga
 "Más consejos próximamente..." (pista -> La propiedad content: para añadir contenido).*/
 aside p:empty::after{/*El after hace que esto se pueda añadir ya que añade contenido al final del documento*/
     content: "Más consejos proximamente";
 }
+
 
 /*Ejercicio 13. 3. Selecciona los tres primeros pasos de la preparación y ponles el texto de un color verde
 oscuro (#2a642a). */
@@ -197,16 +199,20 @@ oscuro (#2a642a). */
     color: green;
 }
 
+
 /*Ejercicio 14. Ahora, selecciona los tres últimos pasos y ponles el texto en un color azulado (#005a9c).*/
 .pasos li:nth-last-child(-n +3){/*Empieza desde abajo, se va al tercero desde abajo hacia arriba y va aplicandolo desde arriba hacia abajo*/
     color: var(--color-Primario);
 }
+
 
 /*Ejercicio 15. Añade una pequeña flecha decorativa (») después del texto de cada título <h2>*/
 h2::after{
     content: "»";
     color: var(--color-Secundario);
 }
+
+
 /*Ejercicio 16. Dentro de la sección aside, hay varios elementos (h3, div, p). Queremos seleccionar el
 segundo div, no el segundo hijo en general. Usa :nth-of-type(2) sobre el div del aside para
 darle un fondo ligeramente amarillento (#fffbe6).*/
@@ -214,12 +220,14 @@ aside div:nth-of-type(2){
     background-color: #cfc48b;
 }
 
+
 /*Ejercicio 17. Haz que las viñetas de la lista de ingredientes (ul) sean del color secundario (#d9534f) y
 más grandes.*/
 .ingredientes ul li::marker{ /*El marker cambia simplemente el puntito de la izquierda de las listas*/
     font-size: 2em;
     color: green;
 }
+
 
 /*Ejercicio 18. Haz que el primer párrafo (p) justo después de un div debe tener la primera letra capital
 (font-size: 6em) y de color secundario (#d9534f). Ajusta los márgenes y padding para que se
@@ -229,11 +237,13 @@ div  p:first-child::first-letter{
     color: var(--color-Secundario);
 }
 
+
 /*Ejercicio 19. Haz que la primera línea de ese mismo párrafo debe estar en versalitas (font-variant:
 small-caps;).*/
 div p:first-child::first-line{
     font-style: italic;
 }
+
 
 /*Ejercicio 20. Haz que cuando un usuario seleccione texto en cualquier parte de la página, el fondo de
 la selección debe ser del color principal de fondo (#005a9c) y el color del texto del color
