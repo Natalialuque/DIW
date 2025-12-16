@@ -1,0 +1,50 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+    background-color: white;
+}
+
+nav{
+    background-color: orange;
+}
+
+.container{
+    display: flex;
+    max-width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.arriba{
+    width: 100%;
+    height: 25%;
+    background-color: aqua;
+}
+
+.cen-izq{
+    width: 30%;
+    height: 50%;
+        background-color: rgb(68, 87, 87);
+
+}
+.cen-cen{
+    width: 30%;
+    height: 50%;
+        background-color: rgb(81, 255, 0);
+
+}
+.cen-dere{
+    width: 30%;
+    height: 50%;
+        background-color: rgb(192, 105, 47);
+
+}
+
+.abajo{
+    width: 100%;
+    height: 25%;
+        background-color: rgb(27, 7, 26);
+
+}
