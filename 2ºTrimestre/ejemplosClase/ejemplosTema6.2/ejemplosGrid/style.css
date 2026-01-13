@@ -1,0 +1,28 @@
+.contenedor{                     /* Selector de la clase contenedor */
+    background-color: gray;      /* Color de fondo del contenedor */
+    display: grid;               /* Activa el modelo de maquetación Grid */
+   /* column-gap: 10px;             Espacio horizontal entre columnas 
+    row-gap: 20px;                Espacio vertical entre filas */
+    /*grid-template-columns: 20% auto 20%; /* Define 3 columnas: estrecha, flexible, estrecha */
+
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows: repeat(3,100px);
+  
+   /* grid-template-rows: repeat(3,100px); /* Crea 3 filas de 100px cada una */
+    margin: 20px auto;           /* Margen superior/inferior 20px y centrado horizontal */
+    padding: 1em;                /* Espacio interno del contenedor */
+    width: 80%;                  /* El contenedor ocupa el 80% del ancho disponible */
+    /* justify-items: center;       /* Centra horizontalmente los ítems dentro de cada celda 
+    align-items: end;            Alinea los ítems al borde inferior de cada celda */
+    place-items: center;      /*alinea como las dos cosas de arriba*/
+    border: 1px solid red;       /* Borde rojo de 1px alrededor del contenedor */
+}
+
+
+.contenedor > div{
+    width: 80%;
+    height: 80%; 
+    background-color: rgb(138, 104, 60);
+    border: 1px solid black;
+
+}

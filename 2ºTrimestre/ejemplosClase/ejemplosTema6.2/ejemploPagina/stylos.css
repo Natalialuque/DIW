@@ -1,0 +1,96 @@
+:root{
+
+    /*COLORES*/
+    --color-letra-footer: #767676;     
+    --color-blanco: #FFFFFF;
+    --color-negro:#000000;
+    --color-azul:#0B419B;
+}
+/*estilos por defecto*/
+body{
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    font-family: roboto;
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+}
+
+/* CABECERA */
+.cabecera{
+    background-color: var(--color-azul);
+    position: sticky;
+    top: 0;
+}
+
+.menu1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* IZQUIERDA */
+.izquierda{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.svgMenu{
+    cursor: pointer;
+}
+
+/* SUBMENÚ */
+.rallitasSubmenu{
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: white;
+    width: 250px;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.rallitasSubmenu.activo{
+    display: block;
+}
+
+.itemRallitasSubmenu{
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.itemRallitasSubmenu:last-child{
+    border-bottom: none;
+}
+
+/* CENTRO */
+.centro{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.svgLogo{
+    height: 40px;
+}
+
+/* DERECHA */
+.derecha{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.derecha h2{
+    color: white;
+    margin: 0;
+}
+
+.logo{
+    width: 40px;
+    height: 40px;
+}
