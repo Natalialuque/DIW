@@ -5,6 +5,9 @@
     --color-blanco: #FFFFFF;
     --color-negro:#000000;
     --color-azul:#0B419B;
+        --color-gris: #f1f1f1;
+
+    
 }
 /*estilos por defecto*/
 body{
@@ -21,6 +24,7 @@ body{
     background-color: var(--color-azul);
     position: sticky;
     top: 0;
+    z-index: 1000; /* ← esto lo mantiene por encima */ 
 }
 
 .menu1{
@@ -34,8 +38,8 @@ body{
 .izquierda{
     display: flex;
     align-items: center;
-    position: relative;
 }
+
 
 .svgMenu{
     cursor: pointer;
@@ -44,19 +48,29 @@ body{
 /* SUBMENÚ */
 .rallitasSubmenu{
     display: none;
-    position: absolute;
-    top: 40px;
+    position: fixed;              
+    top: 60px;                     
     left: 0;
     background-color: white;
+    color: var(--color-azul);
     width: 250px;
     padding: 10px 0;
-    border-radius: 5px;
+    border-radius: 0 5px 5px 0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
 }
 
-.rallitasSubmenu.activo{
+
+/* MOSTRAR SUBMENÚ AL HACER HOVER EN EL ICONO */
+.izquierda:hover .rallitasSubmenu{
     display: block;
 }
+
+.izquierda:hover .rallitasSubmenu,
+.rallitasSubmenu:hover{
+    display: block;
+}
+
 
 .itemRallitasSubmenu{
     padding: 10px 20px;
@@ -95,76 +109,241 @@ body{
     height: 40px;
 }
 
+/**BARRA SELECIONES */
+.barra-secciones {
+    background-color: var(--color-blanco);
+    padding: 12px 0;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+}
+
+.barra-secciones ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.barra-secciones li a {
+    text-decoration: none;
+    color: var(--color-azul);
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.barra-secciones li a:hover {
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+}
+
+
+/* --- BARRA -- */
+
+.barra-julio {
+    display: flex;
+    width: 65%;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.bloque-julio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+    padding: 10px 12px;
+    border-radius: 4px 0 0 4px;
+    white-space: nowrap;
+}
+
+.nombre-julio {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.texto-julio {
+    background-color:var(--color-gris);
+    color: var(--color-negro);
+    padding: 10px 12px;
+    border-radius: 0 4px 4px 0;
+    flex-grow: 4;
+    text-align: left;
+    font-size: 18px;
+}
+
+/* ANIMACIÓN CAMPANITA */
+@keyframes parpadeo {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.campana-svg {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+    animation: parpadeo 1.5s infinite;
+}
+
+
+
+
 
 /* MAIN */
 
-main{
-    margin: 25px;
+.noticia {
+    margin: 10px;
 }
-img{
+
+
+img {
     width: 100%;
+    position: static;
+    z-index: auto;
 }
 
-#not1{
+
+.foto-autor {
+    display: inline-block;
+    border-radius: 50%;
+    filter: grayscale(1);
+}
+
+.autor {
+    text-transform: uppercase;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.tiempo {
+    color: red;
+    font-size: 0.9rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-principal);
+}
+
+h1 {
+    font-size: 2.25rem;
+}
+
+.cursiva {
+    font-size: 1.25rem;
+    font-style: italic;
+}
+
+#not1 {
     grid-area: not1;
-    background-color: #0B419B;
 }
-#not2{
+
+#not2 {
     grid-area: not2;
-        background-color: #6f84aa;
-
 }
-#not3{
+
+#not3 {
     grid-area: not3;
-        background-color: hsl(218, 50%, 75%);
-
 }
-#not4{
+
+#not4 {
+    display: flex;
+    flex-wrap: no-wrap;
     grid-area: not4;
-        background-color: #0c1e3d;
-
-}
-#not5{
-    grid-area: not5;
-        background-color: #050e1f;
-
-}
-#not6{
-    grid-area: not6;
-        background-color: #83affa;
-
-}
-#not7{
-    grid-area: not7;
-        background-color: #77787a;
-
-}
-#not8{
-    grid-area: not8;
-        background-color: #3b414b;
-
-}
-#not9{
-    grid-area: not9;
-        background-color: #19202c;
-
+    justify-items: center;
 }
 
-.titulares{
-    display: grid;
-    margin: 0 auto;
+.izq {
+    width: 55%;
+}
+
+.der {
     width: 40%;
-    gap:10px;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(8,auto);
+    text-align: right;
+}
+
+#not5 {
+    display: flex;
+    flex-wrap: no-wrap;
+    grid-area: not5;
+    justify-content: space-around;
+}
+
+#not6 {
+    grid-area: not6;
+}
+
+#not7 {
+    grid-area: not7;
+}
+
+#not8 {
+    grid-area: not8;
+}
+
+#not9 {
+    grid-area: not9;
+}
+
+.titulares {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(9, auto);
     grid-template-areas: 
-    "not1 not2 not2"
-    "not1 not2 not2"
-    "not1 not2 not2"
-    "not3 not4 not6"
-    "not3 not5 not6"
-    "not7 not7 not8"
-    "not7 not7 not9"
-    "not7 not7 not9";
-   
+        "not1 not2 not2"
+        "not1 not2 not2"
+        "not1 not2 not2"
+        "not3 not4 not6"
+        "not3 not5 not6"
+        "not7 not7 not8"
+        "not7 not7 not9"
+        "not7 not7 not9";
+    justify-content: center;
+    gap: 20px;
+}
+
+/* FOOTER */
+.pie {
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+    padding: 30px 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.pie-enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.pie-enlaces a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.pie-enlaces a:hover {
+    text-decoration: underline;
+}
+
+/* BLOQUE LEGAL FUERA DEL AZUL */
+.pie-legal {
+    background-color: #f9f9f9;
+    color: #6b4c3b; /* marroncito claro */
+    font-size: 12px;
+    line-height: 1.6;
+    padding: 20px;
+    text-align: center;
 }
