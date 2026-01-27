@@ -1,0 +1,72 @@
+:root{
+
+    /*COLORES*/
+    --color-azulOscuro:#0f5aca;
+    --color-azul: #04aeef;
+    --color-grisClaro: #eff0f6;
+    --color-grisOscuro: #c5c6cc;
+
+    
+}
+/*estilos por defecto*/
+body{
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    font-family: roboto;
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+}
+
+/* CABECERA */
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--color-azul);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Logo desktop */
+.logo-desktop {
+  width: 150px;
+  height: auto;
+}
+
+/* Buscador */
+.div-buscar {
+  flex-grow: 1;
+  margin: 0 20px;
+  width: 25px;
+}
+
+.input-buscar {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Menú hamburguesa */
+.menu-rayitas {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+}
+
+.menu-icono {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #333;
+  stroke-width: 6;
+}
