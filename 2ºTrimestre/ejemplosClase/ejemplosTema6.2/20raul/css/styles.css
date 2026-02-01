@@ -1,0 +1,354 @@
+/* Ajustes y Reinicios Globales */
+:root {
+    --color-letra-footer: #767676;
+    --color-blanco: #FFFFFF;
+    --color-negro: #000000;
+    --color-azul: #0B419B;
+}
+
+/* Estilos por defecto */
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: roboto;
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+}
+
+/* CABECERA */
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: var(--color-azul);
+    height: 70px;
+}
+
+/* Grupos izquierda y derecha */
+.cabecera-izq,
+.cabecera-der {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Barra Desplegable */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icono {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.menu-icono svg {
+    width: 100%;
+    height: 100%;
+}
+
+.linea {
+    fill: white;
+    transform-origin: center;
+    transform-box: fill-box;
+    transition: 0.3s ease;
+}
+
+/* Animación hamburguesa */
+#menu-toggle:checked+.menu-icono .linea1 {
+    transform: translateY(6px) rotate(45deg);
+}
+
+#menu-toggle:checked+.menu-icono .linea2 {
+    opacity: 0;
+}
+
+#menu-toggle:checked+.menu-icono .linea3 {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* LOGO CENTRADO */
+.svgLogo {
+    width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Icono usuario */
+.icono svg {
+    margin-bottom: 15%;
+}
+
+/* EDICIONES + flecha */
+.divFlecha {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    color: var(--color-blanco);
+}
+
+.flecha {
+    width: 24px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.flecha {
+    filter: invert(1) sepia(1) hue-rotate(200deg);
+}
+
+.divFlecha:hover .flecha {
+    transform: rotate(180deg);
+}
+
+/* MAIN */
+/* Div 1 */
+.enlaces {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 2%;
+    gap: 10px;
+
+}
+
+.enlaces label {
+    color: var(--color-azul);
+    font-weight: bold;
+}
+
+.enlaces a {
+    color: var(--color-azul);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.enlaces a:last-child {
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Barra Noticia */
+.noticia {
+    display: flex;
+    width: 80%;
+    margin: 5% auto;
+}
+
+.julio {
+    background-color: blue;
+    color: var(--color-blanco);
+    padding: 10px;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.infoJ {
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+
+/* MAIN */
+main {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+}
+
+.info {
+    font-weight: bold;
+    font-size: xx-large;
+    grid-area: info;
+    margin-top: auto;
+}
+
+.gris {
+    color: var(--color-letra-footer);
+    grid-area: gris;
+}
+
+.azul {
+    color: var(--color-azul);
+    grid-area: azul;
+}
+
+.info2 {
+    font-weight: bold;
+    font-size: xx-large;
+    grid-area: info2;
+    margin-top: auto;
+    margin-left: 10%;
+}
+
+.gris2 {
+    color: var(--color-letra-footer);
+    grid-area: gris2;
+    margin-left: 10%;
+}
+
+.azul2 {
+    color: var(--color-azul);
+    grid-area: azul2;
+}
+
+.primera {
+    width: 90%;
+    margin-left: auto;
+    grid-area: primera;
+}
+
+/* Tenemos que asiganar nombres para usar el template areas */
+.contenido {
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+        "info info primera primera primera primera primera primera"
+        "info info primera primera primera primera primera primera"
+        "gris gris info2 info2 info2 info2 info2 info2"
+        "azul azul gris2 azul2 azul2 azul2 azul2 azul2";
+    column-gap: 1%;
+}
+
+.trump {
+    grid-area: trump;
+    width: 300px;
+}
+
+.infoT {
+    grid-area: infoT;
+}
+
+.infoT2 {
+    grid-area: infoT2;
+}
+
+.infoC1 {
+    grid-area: infoC1;
+}
+
+.encarna {
+    grid-area: encarna;
+    border-radius: 150px;
+    width: 150px;
+}
+
+.infoC2 {
+    grid-area: infoC2;
+}
+
+.juan {
+    grid-area: juan;
+    border-radius: 150px;
+    width: 120px;
+
+}
+
+.chema {
+    grid-area: chema;
+    width: 300px;
+}
+
+.infoD {
+    grid-area: infoD;
+}
+
+.contenido2 {
+    margin-top: 5%;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+        "trump trump infoC1 encarna chema chema"
+        "trump trump infoC1 encarna chema chema"
+        "infoT infoT infoC2 juan infoD infoD "
+        "infoT2 infoT2 infoC2 juan infoD infoD";
+    column-gap: 1%;
+}
+
+.xavi {
+    grid-area: xavi;
+    width: 600px;
+}
+
+
+.infoX {
+    grid-area: infoX;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.nueve {
+    grid-area: nueve;
+}
+
+.mou {
+    grid-area: mou;
+    width: 200px;
+}
+
+.infoM {
+    grid-area: infoM;
+    font-weight: bold;
+}
+
+.infoM span {
+    color: red;
+    font-size: xx-small;
+}
+
+.contenido3 {
+    margin-top: 5%;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    grid-template-columns: repeat(8, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "xavi xavi xavi xavi xavi xavi nueve nueve"
+        "xavi xavi xavi xavi xavi xavi mou mou"
+        "infoX infoX infoX infoX infoX infoX infoM infoM";
+    column-gap: 1%;
+}
+
+h4 {
+    background-color: blue;
+    color: var(--color-blanco);
+}
+
+div .dir {
+    background-color: var(--color-blanco);
+    color: var(--color-letra-footer);
+}
+
+/* PIE */
+footer {
+    color: var(--color-letra-footer);
+    font-size: 10px;
+    text-align: center;
+    font-family: serif;
+    width: 100%;
+}
