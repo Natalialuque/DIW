@@ -1,0 +1,11 @@
+.container { 
+background-color:aqua; 
+display:flex; 
+height: 200px; 
+width: 80%; 
+flex-direction: row; flex-wrap: nowrap;
+}
+
+.primero{
+align-self: center;
+}
