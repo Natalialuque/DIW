@@ -184,7 +184,7 @@ body{
   height: auto;
   display: block;
   border-radius: 8px;
-  filter: brightness(95%);
+  filter: brightness(95%); 
 }
 
 /* Inferiores: texto a la derecha de la imagen (en su propia celda de grid) */
