@@ -1,0 +1,408 @@
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+p {
+    color: #666;
+}
+
+/*HEADER*/
+.cabecera {
+    background-color: #fff;
+    overflow-y: auto;
+    border-bottom: 3px solid rgba(0,0,0,0.05);
+}
+
+/*SECCION DE LA IZQUIERDA DEL MENÚ DE NAVEGACION*/
+.cabflotaizq {
+    float: left;
+    width: 45%;
+    text-align: left;
+}
+
+/*SECCION DE LA DERECHA DEL MENÚ DE NAVEGACION*/
+.cabflotader {
+    float: right;
+    width: 45%;
+    text-align: right;
+    margin-top: 10px; /* ajustado un poco para que se quede centardo con respecto al de la izquierda*/
+}
+
+/*quitar las viñetas del ul*/
+.cabecera ul {
+    list-style: none;    
+}
+
+/*ponerlos en línea y alienarlos verticalmente*/
+.cabecera ul li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cabecera ul li a {
+    text-decoration: none; /*quitar el subrayado*/
+    color: #333;
+    font-weight: bold;
+    margin: 10px;
+    font-size: 0.9em;
+}
+
+
+.logo {
+    width: 115px;
+    margin-left: -25px; /*para que se quede más a la izq*/
+}
+
+/* la imagen de la flechita hacía abajo*/
+.flecha {
+    margin-left: 10px;
+}
+
+/*CUERPO*/
+
+main {
+    position: relative;    
+}
+
+/*el div de arriba ocupa la mitad del main*/
+.arriba {
+    position: relative;
+    height: 45vh;
+    overflow-y: auto; /*para que reconozca a sus elementos flotantes y se adapte a su tamaño*/
+}
+
+/*DIV SUPERIOR DEL MAIN*/
+
+/*div que flota a la izq del div .arriba*/
+.mainflotaizq {
+    float: left;
+    width: 45%;
+    height: 100%;
+    position: relative;
+}
+
+/* div dentro del dvi que flota a la izquierda del main*/
+.mfi-contenedor {
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%,-50%);
+    height: 80%;
+    width: 50%;
+    box-shadow: 0 0 10px -2px rgba(0,0,0,0.5);
+    border-radius: 5px;
+}
+
+/*imagen del fondo naranja, ocupa la parte superior de .mfi-contenedor*/
+.imgfondonaranja{
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/*div con el input de búsqueda*/
+.busqueda {
+    position: absolute;
+    bottom: 75%;
+    right: -12%;
+    width: 200px;
+    border-radius: 100px;
+    padding: 8px;
+    background-color: white;
+    box-shadow: 0 0 10px -2px rgba(0,0,0,0.5);
+}
+
+/*check negro posicionado a la derecha del div .busqueda*/
+.checknegro{
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    transform: translate(-50%,+50%);
+    width: 10%;
+}
+
+/*input del div .busqueda*/
+.dominio {
+    border: none;
+    outline: none; /*para que no se vea el remarcado azul tan fuerte al escribir en él*/
+    padding-left: 10px;
+}
+
+/*cuando el input de búsqueda tiene el foco, se ve una leve sombra*/
+.dominio:focus {
+    box-shadow: 0 0 10px -2px rgba(0,0,0,0.1);
+}
+
+/*div con el cuadrado de olas a la izquierda de .mfi-contenedor*/
+.cuadrado {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    transform: translate(-50%,-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 0 10px -2px rgba(0,0,0,0.5);}
+
+/*imagen de olas posicionada en el centro de .cuadrado*/
+.olasnegro {
+    position: absolute;
+    top: calc((100% - 70%) / 2);
+    left: calc((100% - 70%) / 2);
+    width: 70%;
+}
+
+/*es la imagen de olas invertida y posicionada arriba en el centro*/
+.olasblancas {
+    position: absolute;
+    width: 15%;
+    filter: invert(1); /*así se invierte*/
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*boton de menú posicionado arriba a la izquierda de .mfi-contenedor*/
+.btnmenu {
+    position: absolute;
+    top: 4%;
+    left: 4%;
+    width: 5%;
+    filter: invert(1);
+}
+
+/*igual que menú pero a la derecha*/
+.btnbolsa {
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    width: 5%;
+    filter: invert(1);
+}
+
+/*parte inferior de .mfi-contenedor*/
+/*se ha hecho con display: table para practicarlo*/
+.tabla-abajo {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: table;            
+    width: 80%; 
+    table-layout: fixed;            
+    border-spacing: 10px; 
+}
+
+/*div para la fila de la tabla*/
+.fila-tabla {
+    display: table-row;
+}
+
+/*div para las 3 columnas (table-cell) iguales*/
+.celda {
+    position: relative;
+    display: table-cell;
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/*la imagen dentro de la celda que se va a mover mediante js*/
+.celda .movible {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    cursor: grab;
+    user-select: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+/*la imagen de dentro de la celda que se va a quedar de fondo cuando la otra se mueva*/
+.celda .img-fondo-movible {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: 100%;
+    height: auto;
+    z-index: 50;
+}
+
+/*div que flota a la derecha del div .arriba*/
+.mainflotader {
+    margin-left: 5%;
+    float: left;
+    width: 45%;
+    height: 100%;
+    position: relative;
+}
+
+/*contenedor de los textos del div derecho dentro de .arriba dentro de main*/
+.contenedor-texto {
+    position: absolute;
+    top: 50%;
+    width: 35%;
+    transform: translateY(-50%)
+}
+
+/* COMIENZA LA PARTE INFERIOR DEL MAIN */
+
+/* <div> que ocupa toda la parte inferior */
+.abajo {
+    height: 45vh;
+}
+
+/* la imagen sosteniendo el m´vil*/
+.abajo .movil-mano {
+    max-height: 100%;
+    border-radius: 5px;
+}
+
+
+.mfi-contenedor-abajo {
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%,-50%);
+    height: 80%;
+    box-shadow: 0 0 10px -2px rgba(0,0,0,0.5);
+    border-radius: 5px;
+}
+
+/* Reglas para el contenedor de las zapatillas con el logo de google*/
+
+.contenedor-google {
+    position: absolute;
+    bottom: -5%;
+    right: -50%;
+    width: 65%; 
+    height: 70%;
+    box-shadow: 0 0 10px -2px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    background-color: white;   
+}
+
+.cg-barra-arriba {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 18%;
+    box-shadow: 0 0 10px -2px rgba(0,0,0,0.1);
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+.img-logo-google {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    width: 15%;
+}
+
+.mic-google {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 12.5%;
+}
+
+.cg-barra-centro {
+    position: absolute;
+    top: 28%;
+    left: 5%;
+    width: 90%;
+    height: 40%;
+    box-shadow: 0 0 10px -2px rgba(0,0,0,0.1);
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.cont-zap {
+    position: absolute;
+    top: 10%;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px -2px rgba(0,0,0,0.5);
+
+}
+
+.zap-izq {
+    left: 10%;
+}
+
+.zap-der {
+    left: 75%;
+}
+
+.img-zap {
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    width: 120%;
+    height: auto;
+    transform: rotatez(-15deg);
+    
+}
+
+/* Reglas para el contenedor del hombre saltando con el logo de facebook*/
+
+.contenedor-facebook {
+    position: absolute;
+    top: 10%;
+    transform: translate(-50%,-50%);
+    width: 55%; 
+    height: 50%;
+    box-shadow: 0 0 10px -2px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    background-color: white;   
+}
+
+.img-hombre-salta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+}
+
+.img-logo-facebook {
+    position: absolute;
+    top: 7.5%;
+    left: 10%;
+    width: 12.5%;
+}
+
+.img-bolsa-abajo {
+    position: absolute;
+    bottom: 7.5%;
+    left: 10%;
+    width: 12.5%;
+    box-shadow: 0 0 10px -2px rgba(0,0,0,0.1);
+    border-radius: 50%;
+    padding: 2px;
+}
+
+/*contenedor de los textos del div derecho dentro de .abajo dentro de main*/
+
+.contenedor-texto-abajo {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    width: 50%;
+    transform: translateY(-50%)
+}

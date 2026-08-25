@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecera">
+        <nav class="navegacion">
+            <div class="cabflotaizq">
+                <ul>
+                    <li><a href="#"><img class="logo" src="img/logo2.png"></a></li>
+                    <li><a href="#">Start<img class="flecha" src="img/flecha-hacia-abajo.png" style="width: 9px;"></a></li>
+                    <li><a href="#">Shell<img class="flecha" src="img/flecha-hacia-abajo.png" style="width: 9px;"></a></li>
+                    <li><a href="#">Market<img class="flecha" src="img/flecha-hacia-abajo.png" style="width: 9px;"></a></li>
+                    <li><a href="#">Manage<img class="flecha" src="img/flecha-hacia-abajo.png" style="width: 9px;"></a></li>
+                </ul>
+            </div>
+            <div class="cabflotader">
+                <ul>
+                    <li><a href="#">Princing</a></li>
+                    <li><a href="#">Learn<img class="flecha" src="img/flecha-hacia-abajo.png" style="width: 9px;"></a></li>
+                    <li><a href="#">Log in</a></li>
+                    <li><a class="boton" href="#" style="background-color: #5c6ac4; padding: 10px 20px; color: white; border-radius: 5px; box-shadow: 0 0 5px -2px rgba(0,0,0,0.5);">Start free trial</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        
+        <!-- COMIENZA LA SECCIÓN INFERIOR DEL MAIN -->
+        <section class="arriba">
+            <!-- Elemento que flota a la izquierda, en el <div> que ocupa la parte alta del <main> -->
+            <div class="mainflotaizq">
+                <!-- Contenedor el elementos de la parte superior izquieda -->
+                <div class="mfi-contenedor">
+                    <!-- imagen delas olas en blanco -->
+                    <img class="olasblancas" src="img/olas.png">
+                    <!-- botón de las 3 rayitas para el menú -->    
+                    <img class="btnmenu" src="img/menu.png">
+                    <!-- icono carrito como una bolsa -->
+                    <img class="btnbolsa" src="img/bolsa.png">
+                    <!-- la imagen de la chica con el fondo naranja -->
+                    <img class="imgfondonaranja" src="img/persona fondo naranja.jpg">
+                    <!-- <div> con el cuadro de búsqueda -->
+                    <div class="busqueda">
+                        <input class="dominio" type="text" name="texto" placeholder="https://yourdomain.com">
+                        <img class="checknegro" src="img/check.png">
+                    </div>
+
+                    <!-- <div> con el cuadrado blanco y la imagen de olas negras dentro -->
+                    <div class="cuadrado">
+                        <img class="olasnegro" src="img/olas.png">
+                    </div>
+
+                    <!-- Usamos varios <div> para crear una estructura de una fila y tres columnas y le damos formato con display: table -->
+                    <!-- La tabla en si -->
+                    <div class="tabla-abajo">
+                        <!-- Un <div> para la fila -->
+                        <div class="fila-tabla">
+                            <!-- 3 <div> uno por cada columna o celda -->
+                            <div class="celda">
+                                <img id="img1" class="movible" src="img/camiseta-rosa.png" alt="Camiseta Nike">
+                                <img class="img-fondo-movible" src="img/cuadrado rayitas.png">
+                            </div>
+                            <div class="celda">
+                                <img id="img2" class="movible" src="img/camiseta.png" alt="Camiseta Nike">
+                                <img class="img-fondo-movible" src="img/cuadrado rayitas.png">
+                            </div>
+                            <div class="celda">
+                                <img id="img3" class="movible" src="img/camiseta-azul.png" alt="Camiseta Nike">
+                                <img class="img-fondo-movible" src="img/cuadrado rayitas.png">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>    
+            </div>
+
+            <!-- un <div> que flota a la derecha del <div> que ocupa toda la parte superior -->
+            <div class="mainflotader">
+                <div class="contenedor-texto">
+                    <h2 style="color: #5c6ac4;">Start —</h2>
+                    <h2>your business journey</h2>
+                    <p>Find a business name, buy domain, and create a brand with our free tools</p>
+                    <h4>Explore tools to start your business →</h4>
+                </div>   
+            </div>
+        </section>
+
+        <!-- COMIENZA LA SECCIÓN INFERIOR DEL MAIN -->
+
+        <!-- <div> ubicado en la parte inferior del <main> -->
+        <section class="abajo">
+            <!-- <div> que flota a la derecha de la parte inferior del <main> -->
+            <div class="mainflotaizq">
+                
+                <!-- contenedor para toda la parte del hombre saltando y el logo de facebook-->
+                <div class="mfi-contenedor-abajo">
+                    <img class="movil-mano" src="img/manos movil.jpg">
+                    <div class="contenedor-facebook">
+                        <img class="img-hombre-salta" src="img/hombre-saltando.png">
+                        <img class="img-logo-facebook" src="img/Facebook_logo_(square).png">
+                        <img class="img-bolsa-abajo" src="img/bolsa.png">
+                    </div>
+
+                    <div class="contenedor-google">
+                        <div class="cg-barra-arriba">
+                            <img class="img-logo-google" src="img/logo-google.png">
+                            <img class="mic-google" src="img/microfono-google-trans.png">
+                        </div>
+                        <div class="cg-barra-centro">
+                            <div class="cont-zap zap-izq">
+                                <img class="img-zap" src="img/zapatilla01.png">
+                            </div>
+
+                            <div class="cont-zap zap-der">
+                                <img class="img-zap" src="img/zapatilla02.png">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- un <div> que flota a la derecha del <div> que ocupa toda la parte inferior -->
+            <div class="mainflotader">
+                <div class="contenedor-texto-abajo">
+                    <h2 style="color: #5c6ac4;">Market —</h2>
+                    <h2>your business</h2>
+                    <p style="color: #666;">Take the guesswork out of marketing with built-in tools thath help you create, execute, and analyze campaigns on Facebook and Google</p>
+                    <h4>Explore how to market your business →</h4>
+                </div>   
+            </div>
+
+        </section>
+
+    </main>
+</body>
+</html>
